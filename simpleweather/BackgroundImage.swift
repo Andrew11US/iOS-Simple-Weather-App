@@ -29,7 +29,7 @@ class BackgroundImage: UIImageView {
         
         var imgArray = [UIImage]()
         
-        for x in 1...10 {
+        for x in 1...6 {
             let img = UIImage(named: "bg\(x).jpg")
             imgArray.append(img!)
         }
