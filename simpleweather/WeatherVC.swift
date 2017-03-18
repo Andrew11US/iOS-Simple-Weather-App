@@ -33,7 +33,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestWhenInUseAuthorization()
         locationManager.startMonitoringSignificantLocationChanges()
         
         tableView.dataSource = self
@@ -44,6 +44,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         locationAutoStatus()
         
     }
@@ -51,6 +52,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     func locationAutoStatus() {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            
             currentLocation = locationManager.location
             Location.sharedInstance.latitude = currentLocation.coordinate.latitude
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
@@ -61,10 +63,19 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                 }
             }
             
-        } else {
+        } else if CLLocationManager.authorizationStatus() == .notDetermined {
             
             locationManager.requestWhenInUseAuthorization()
-            locationAutoStatus()
+            
+            _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
+                
+                self.locationAutoStatus()
+            }
+            
+        } else {
+            
+            locationLbl.text = "Access Denied"
+            
         }
         
     }
