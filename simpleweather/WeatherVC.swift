@@ -45,6 +45,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         locationAutoStatus()
+        
     }
     
     func locationAutoStatus() {
