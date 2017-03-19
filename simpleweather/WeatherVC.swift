@@ -40,12 +40,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         tableView.delegate = self
         
         currentWeather = CurrentWeather()
+        locationAutoStatus()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        locationAutoStatus()
+        //locationAutoStatus()
         
     }
     
@@ -67,14 +68,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             
             locationManager.requestWhenInUseAuthorization()
             
-            _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
+            _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (timer) in
                 
                 self.locationAutoStatus()
             }
             
         } else {
             
-            locationLbl.text = "Access Denied"
+            locationLbl.text = "Unable to Position :("
+            currentWeatherImg.image = UIImage(named: "No")
             
         }
         
