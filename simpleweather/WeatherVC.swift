@@ -132,6 +132,12 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         currentWeatherTypeLbl.text = currentWeather.weatherType
         locationLbl.text = currentWeather.cityName
         currentWeatherImg.image = UIImage(named: currentWeather.weatherType)
+//        currentWeatherImg.image = UIImage(named: "Tornado")
+        
+        if currentWeatherImg.image == nil {
+            currentWeatherImg.image = UIImage(named: "NoCondition")
+            print("No Image!")
+        }
     }
     
 }
