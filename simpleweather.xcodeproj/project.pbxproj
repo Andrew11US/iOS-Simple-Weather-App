@@ -142,9 +142,9 @@
 		9086DA791DBFE10F0045C3F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9086DA7A1DBFEC870045C3F4 /* Constants.swift */,
 				9086DA7C1DBFEFBE0045C3F4 /* CurrentWeather.swift */,
 				90A410D51DC11F0D009C9238 /* Forecast.swift */,
+				9086DA7A1DBFEC870045C3F4 /* Constants.swift */,
 				90A410DA1DC139FB009C9238 /* Location.swift */,
 			);
 			name = Model;

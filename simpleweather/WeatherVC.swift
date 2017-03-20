@@ -55,12 +55,22 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             
             currentLocation = locationManager.location
-            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
             
-            currentWeather.downloadWeatherDetails {
-                self.downloadForecastData {
+            if locationManager.location == nil {
+            
+                locationLbl.text = "Unable to Position :("
+                currentWeatherImg.image = UIImage(named: "No")
+            
+                print("No GPS")
+            } else {
+            
+                Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+                Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            
+                currentWeather.downloadWeatherDetails {
+                    self.downloadForecastData {
                     self.updateMainUI()
+                    }
                 }
             }
             
