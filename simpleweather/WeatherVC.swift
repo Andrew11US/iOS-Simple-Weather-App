@@ -20,6 +20,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var background: BackgroundImage!
+    @IBOutlet weak var updateWeather: UIButton!
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -127,8 +128,17 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherCell {
             
-            let forecast = forecasts[indexPath.row]
-            cell.configureCell(forecast: forecast)
+//            let forecast = forecasts[indexPath.row]
+//            cell.configureCell(forecast: forecast)
+            
+            if forecasts.count != 0 {
+                let forecast = forecasts[indexPath.row]
+                cell.configureCell(forecast: forecast)
+            } else {
+//                currentWeatherImg.image = UIImage(named: "No")
+//                currentWeatherTypeLbl.text = "No"
+//                locationLbl.text = "Connection :("
+            }
             return cell
         } else {
             return WeatherCell()
@@ -148,7 +158,23 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             currentWeatherImg.image = UIImage(named: "NoCondition")
             print("No Image!")
         }
+        
+        if forecasts.count == 0 {
+            currentWeatherImg.image = UIImage(named: "No")
+            currentWeatherTypeLbl.text = "No"
+            locationLbl.text = "Connection :("
+            currentTempLbl.text = "--"
+        }
     }
     
+    @IBAction func updateWeatherPressed(_ sender: Any) {
+        
+        if forecasts.count > 0 {
+            forecasts.removeAll()
+        }
+        
+        locationAutoStatus()
+        
+    }
 }
 

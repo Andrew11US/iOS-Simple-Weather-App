@@ -24,6 +24,12 @@ class WeatherCell: UITableViewCell {
         weatherIcon.image = UIImage(named: forecast.weatherType)
         dayLbl.text = forecast.date
         
+//        weatherIcon.image = UIImage(named: "Tornado")
+        if weatherIcon.image == nil {
+            weatherIcon.image = UIImage(named: "NoCondition")
+            print("No Image!")
+        }
+        
     }
 
 

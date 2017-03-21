@@ -51,6 +51,12 @@
                                             <constraint firstAttribute="height" constant="120" id="b8l-IU-EfU"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cME-hj-CRH">
+                                        <rect key="frame" x="286" y="73" width="120" height="120"/>
+                                        <connections>
+                                            <action selector="updateWeatherPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJK-li-zBu"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-ha-AbN">
                                         <rect key="frame" x="8" y="73" width="270" height="120"/>
                                         <constraints>
@@ -82,12 +88,16 @@
                                 <constraints>
                                     <constraint firstItem="gA0-ke-KCg" firstAttribute="leading" secondItem="9Ho-dz-8iP" secondAttribute="leading" constant="8" id="0Vq-Jc-ov7"/>
                                     <constraint firstItem="yPp-Ue-QkI" firstAttribute="top" secondItem="GUs-JC-YCN" secondAttribute="bottom" constant="8" id="26T-i4-vqc"/>
+                                    <constraint firstItem="yPp-Ue-QkI" firstAttribute="height" secondItem="cME-hj-CRH" secondAttribute="height" id="6rc-MH-eE1"/>
                                     <constraint firstItem="gfh-ha-AbN" firstAttribute="leading" secondItem="9Ho-dz-8iP" secondAttribute="leading" constant="8" id="Aog-QY-gcc"/>
                                     <constraint firstItem="GUs-JC-YCN" firstAttribute="leading" secondItem="9Ho-dz-8iP" secondAttribute="leading" constant="8" id="Bwp-re-H4z"/>
+                                    <constraint firstItem="yPp-Ue-QkI" firstAttribute="width" secondItem="cME-hj-CRH" secondAttribute="width" id="DjE-up-fc7"/>
                                     <constraint firstAttribute="height" constant="300" id="F09-qP-Ys7"/>
                                     <constraint firstItem="2rl-YL-yi7" firstAttribute="leading" secondItem="9Ho-dz-8iP" secondAttribute="leading" constant="8" id="FhG-Yo-trL"/>
                                     <constraint firstItem="GUs-JC-YCN" firstAttribute="top" secondItem="9Ho-dz-8iP" secondAttribute="top" constant="20" id="HFO-gb-wme"/>
                                     <constraint firstAttribute="trailing" secondItem="GUs-JC-YCN" secondAttribute="trailing" constant="8" id="JRU-nk-Zfj"/>
+                                    <constraint firstItem="yPp-Ue-QkI" firstAttribute="centerX" secondItem="cME-hj-CRH" secondAttribute="centerX" id="JnM-0j-8bR"/>
+                                    <constraint firstItem="yPp-Ue-QkI" firstAttribute="centerY" secondItem="cME-hj-CRH" secondAttribute="centerY" id="JsF-mn-tU5"/>
                                     <constraint firstItem="yPp-Ue-QkI" firstAttribute="leading" secondItem="gfh-ha-AbN" secondAttribute="trailing" constant="8" id="V0J-rg-7E9"/>
                                     <constraint firstItem="gfh-ha-AbN" firstAttribute="top" secondItem="GUs-JC-YCN" secondAttribute="bottom" constant="8" id="V7j-ra-LTA"/>
                                     <constraint firstAttribute="trailing" secondItem="2rl-YL-yi7" secondAttribute="trailing" constant="8" id="YT9-gc-tqp"/>
@@ -227,6 +237,7 @@
                         <outlet property="dateLbl" destination="GUs-JC-YCN" id="jpc-Zd-5P3"/>
                         <outlet property="locationLbl" destination="gA0-ke-KCg" id="Pzu-ia-drU"/>
                         <outlet property="tableView" destination="sl7-ql-N37" id="6Qa-Sw-4wr"/>
+                        <outlet property="updateWeather" destination="cME-hj-CRH" id="nMo-zq-88Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
