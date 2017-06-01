@@ -26,7 +26,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var humidityLbl: UILabel!
     @IBOutlet weak var windLbl: UILabel!
     @IBOutlet weak var cloudinessLbl: UILabel!
-    @IBOutlet weak var seaLevelLbl: UILabel!
+    @IBOutlet weak var maxTempLbl: UILabel!
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -154,9 +154,14 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     func updateMainUI() {
         
         dateLbl.text = currentWeather.date
-        currentTempLbl.text = "\(currentWeather.currentTemp)"
+        currentTempLbl.text = currentWeather.currentTemp
         currentWeatherTypeLbl.text = currentWeather.weatherType
         locationLbl.text = currentWeather.cityName
+        pressureLbl.text = currentWeather.pressure
+        humidityLbl.text = currentWeather.humidity
+        windLbl.text = currentWeather.wind
+        cloudinessLbl.text = currentWeather.cloudiness
+        maxTempLbl.text = currentWeather.maxTemp
         currentWeatherImg.image = UIImage(named: currentWeather.weatherType)
 //        currentWeatherImg.image = UIImage(named: "Tornado")
         
@@ -180,7 +185,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         }
         
         locationAutoStatus()
-        
     }
 }
 
