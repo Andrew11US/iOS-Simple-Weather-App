@@ -67,6 +67,26 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             
                 locationLbl.text = "Unable to Position :("
                 currentWeatherImg.image = UIImage(named: "No")
+                
+                /*
+                // LA
+//                Location.sharedInstance.latitude = 34.052235
+//                Location.sharedInstance.longitude = -118.243683
+                
+                // Tokyo
+//                Location.sharedInstance.latitude = 35.652
+//                Location.sharedInstance.longitude = 139.839
+                
+                // London
+//                Location.sharedInstance.latitude = 51.508530
+//                Location.sharedInstance.longitude = -0.076132
+                
+                currentWeather.downloadWeatherDetails {
+                    self.downloadForecastData {
+                        self.updateMainUI()
+                    }
+                }
+                */
             
                 print("No GPS")
             } else {
