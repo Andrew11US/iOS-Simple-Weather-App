@@ -22,6 +22,12 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var background: BackgroundImage!
     @IBOutlet weak var updateWeather: UIButton!
     
+    @IBOutlet weak var pressureLbl: UILabel!
+    @IBOutlet weak var humidityLbl: UILabel!
+    @IBOutlet weak var windLbl: UILabel!
+    @IBOutlet weak var cloudinessLbl: UILabel!
+    @IBOutlet weak var seaLevelLbl: UILabel!
+    
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
