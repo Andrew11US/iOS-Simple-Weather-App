@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		071B791C0FFC70C1ED7EFF08 /* Pods_simpleweatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C3D1567169FA052191E062 /* Pods_simpleweatherUITests.framework */; };
 		4D017C8230EBE18583835C40 /* Pods_simpleweatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75C47887F8022AE30483A9 /* Pods_simpleweatherTests.framework */; };
+		90499F631F67FDEE008AFAD1 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90499F621F67FDEE008AFAD1 /* Barometer.swift */; };
 		9086DA7B1DBFEC870045C3F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086DA7A1DBFEC870045C3F4 /* Constants.swift */; };
 		9086DA7D1DBFEFBE0045C3F4 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086DA7C1DBFEFBE0045C3F4 /* CurrentWeather.swift */; };
 		909C22951DC238290098E1FB /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909C22941DC238290098E1FB /* BackgroundImage.swift */; };
@@ -52,6 +53,7 @@
 		4512DBA826A593B272A2BDB4 /* Pods-simpleweatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleweatherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simpleweatherUITests/Pods-simpleweatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		766DA306B45606099D0091FC /* Pods-simpleweatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleweatherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-simpleweatherUITests/Pods-simpleweatherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8AA69638B09DEA8A5ECFC1EF /* Pods-simpleweather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleweather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simpleweather/Pods-simpleweather.debug.xcconfig"; sourceTree = "<group>"; };
+		90499F621F67FDEE008AFAD1 /* Barometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
 		9086DA7A1DBFEC870045C3F4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9086DA7C1DBFEFBE0045C3F4 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		909C22941DC238290098E1FB /* BackgroundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				90A410D51DC11F0D009C9238 /* Forecast.swift */,
 				9086DA7A1DBFEC870045C3F4 /* Constants.swift */,
 				90A410DA1DC139FB009C9238 /* Location.swift */,
+				90499F621F67FDEE008AFAD1 /* Barometer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				909C22951DC238290098E1FB /* BackgroundImage.swift in Sources */,
 				9086DA7D1DBFEFBE0045C3F4 /* CurrentWeather.swift in Sources */,
 				9086DA7B1DBFEC870045C3F4 /* Constants.swift in Sources */,
+				90499F631F67FDEE008AFAD1 /* Barometer.swift in Sources */,
 				90A410D61DC11F0D009C9238 /* Forecast.swift in Sources */,
 				90A410DB1DC139FB009C9238 /* Location.swift in Sources */,
 			);
@@ -668,8 +672,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2d7f1e47-ece2-4879-aaf6-ecec51ae2392";
-				PROVISIONING_PROFILE_SPECIFIER = SWDevProfile;
+				PROVISIONING_PROFILE = "5c1b83b6-f453-46c7-a4c6-55d9f287f64e";
+				PROVISIONING_PROFILE_SPECIFIER = SimpleWeatherDevProfile;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
