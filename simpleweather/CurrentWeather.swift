@@ -19,6 +19,7 @@ class CurrentWeather {
     var _wind: String!
     var _cloudiness: String!
     var _maxTemp: String!
+    var _uvIndex: String!
     
     var cityName: String {
         if _cityName == nil {
@@ -90,6 +91,13 @@ class CurrentWeather {
         return _maxTemp
     }
     
+    var uvIndex: String {
+        if _uvIndex == nil {
+            _uvIndex = "--"
+        }
+        return _uvIndex
+    }
+    
     func downloadWeatherDetails(completed: @escaping DownloadComplete) {
         // Download current weather data
         Alamofire.request(CURRENT_WEATHER_URL).responseJSON { response in
@@ -159,6 +167,20 @@ class CurrentWeather {
                         print("maxTemp:", self._maxTemp)
                     }
                     
+                }
+            }
+            completed()
+        }
+        
+        Alamofire.request(UV_INDEX_URL).responseJSON { response in
+            let result = response.result
+            
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                if let uv = dict["value"] as? Double {
+                    let uvRounded = Double(round(uv))
+                    self._uvIndex = String(Int(uvRounded))
+                    print("UV:" , self._uvIndex)
                 }
             }
             completed()

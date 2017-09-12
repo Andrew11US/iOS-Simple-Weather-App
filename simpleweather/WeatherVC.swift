@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreMotion
 import Alamofire
 import Foundation
 
@@ -27,6 +28,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var windLbl: UILabel!
     @IBOutlet weak var cloudinessLbl: UILabel!
     @IBOutlet weak var maxTempLbl: UILabel!
+    @IBOutlet weak var uvIndexLbl: UILabel!
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -34,6 +36,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
     var forecasts = [Forecast]()
+    let altimeter = CMAltimeter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +55,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        getPressure()
         
     }
     
@@ -91,8 +92,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                 print("No GPS")
             } else {
             
-                Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-                Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+                Location.shared.latitude = currentLocation.coordinate.latitude
+                Location.shared.longitude = currentLocation.coordinate.longitude
             
                 currentWeather.downloadWeatherDetails {
                     self.downloadForecastData {
@@ -177,11 +178,33 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         currentTempLbl.text = currentWeather.currentTemp
         currentWeatherTypeLbl.text = currentWeather.weatherType
         locationLbl.text = currentWeather.cityName
-        pressureLbl.text = currentWeather.pressure
         humidityLbl.text = currentWeather.humidity
         windLbl.text = currentWeather.wind
         cloudinessLbl.text = currentWeather.cloudiness
-        maxTempLbl.text = currentWeather.maxTemp
+        uvIndexLbl.text = currentWeather.uvIndex
+        pressureLbl.text = currentWeather.pressure
+        
+//        if CMAltimeter.isRelativeAltitudeAvailable() {
+//            
+//            altimeter.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler: { data, error in
+//                
+//                if error != nil {
+//                    print("Error occured!")
+//                    
+//                } else {
+//                    print("Pressure:", String(describing: data?.pressure))
+//                    if data == data?.pressure {
+//                        self.pressureLbl.text = "\(String(describing: data))"
+//                    }
+//                }
+//            })
+//            
+//        } else {
+//            
+//            print("Unable to get pressure from device or data is unavailable!")
+//            pressureLbl.text = currentWeather.pressure
+//        }
+        
         currentWeatherImg.image = UIImage(named: currentWeather.weatherType)
 //        currentWeatherImg.image = UIImage(named: "Tornado")
         
