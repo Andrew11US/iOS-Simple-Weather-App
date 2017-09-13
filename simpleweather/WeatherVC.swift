@@ -53,9 +53,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         locationAutoStatus()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEventSubtype.motionShake {
+            print("Shake")
+            
+            updateWeatherDetails()
+            
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+        }
     }
     
     func locationAutoStatus() {
@@ -68,6 +74,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             
                 locationLbl.text = "Unable to Position :("
                 currentWeatherImg.image = UIImage(named: "No")
+                
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.warning)
                 
                 /*
                 // LA
@@ -116,6 +125,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             locationLbl.text = "Unable to Position :("
             currentWeatherImg.image = UIImage(named: "No")
             
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
         }
         
     }
@@ -134,7 +145,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                         
                         let forecast = Forecast(weatherDict: obj)
                         self.forecasts.append(forecast)
-                        print(obj)
+//                        print(obj)
                     }
                     self.forecasts.remove(at: 0)
                     self.tableView.reloadData()
@@ -196,6 +207,14 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             currentWeatherTypeLbl.text = "No"
             locationLbl.text = "Connection :("
             currentTempLbl.text = "--"
+            humidityLbl.text = "--"
+            windLbl.text = "--"
+            cloudinessLbl.text = "--"
+            uvIndexLbl.text = "--"
+            pressureLbl.text = "--"
+            
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
         }
     }
     

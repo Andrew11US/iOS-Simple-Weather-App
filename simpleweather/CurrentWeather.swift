@@ -105,6 +105,8 @@ class CurrentWeather {
             
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 
+                print(dict)
+                
                 if let name = dict["name"] as? String {
                     self._cityName = name.capitalized
                     print(self._cityName)
@@ -115,7 +117,12 @@ class CurrentWeather {
                     if let main = weather[0]["main"] as? String {
                         self._weatherType = main.capitalized
                         print(self._weatherType)
-                    } 
+                    }
+                    
+                    if let description = weather[0]["description"] as? String {
+//                        self._weatherType = description.capitalized
+                        print(description.capitalized)
+                    }
                 }
                 
                 if let wind = dict["wind"] as? Dictionary<String, AnyObject> {
