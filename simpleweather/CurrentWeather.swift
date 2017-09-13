@@ -183,7 +183,6 @@ class CurrentWeather {
                     print("UV:" , self._uvIndex)
                 }
             }
-            completed()
         }
     }
     

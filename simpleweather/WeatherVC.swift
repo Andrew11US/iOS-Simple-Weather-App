@@ -183,28 +183,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         cloudinessLbl.text = currentWeather.cloudiness
         uvIndexLbl.text = currentWeather.uvIndex
         pressureLbl.text = currentWeather.pressure
-        
-//        if CMAltimeter.isRelativeAltitudeAvailable() {
-//            
-//            altimeter.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler: { data, error in
-//                
-//                if error != nil {
-//                    print("Error occured!")
-//                    
-//                } else {
-//                    print("Pressure:", String(describing: data?.pressure))
-//                    if data == data?.pressure {
-//                        self.pressureLbl.text = "\(String(describing: data))"
-//                    }
-//                }
-//            })
-//            
-//        } else {
-//            
-//            print("Unable to get pressure from device or data is unavailable!")
-//            pressureLbl.text = currentWeather.pressure
-//        }
-        
         currentWeatherImg.image = UIImage(named: currentWeather.weatherType)
 //        currentWeatherImg.image = UIImage(named: "Tornado")
         
@@ -221,7 +199,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         }
     }
     
-    @IBAction func updateWeatherPressed(_ sender: Any) {
+    func updateWeatherDetails() {
         
         if forecasts.count > 0 {
             forecasts.removeAll()
