@@ -5,6 +5,9 @@
 //  Created by Andrew Foster on 10/16/16.
 //  Copyright © 2016 Andrii Halabuda. All rights reserved.
 //
+///---Future releases---///
+//-> Barometer screen
+//-> AdMob
 
 import UIKit
 import CoreLocation
@@ -78,25 +81,33 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                 let generator = UINotificationFeedbackGenerator()
                 generator.notificationOccurred(.warning)
                 
-                /*
+                
                 // LA
-//                Location.sharedInstance.latitude = 34.052235
-//                Location.sharedInstance.longitude = -118.243683
+                Location.shared.latitude = 34.052235
+                Location.shared.longitude = -118.243683
                 
                 // Tokyo
-//                Location.sharedInstance.latitude = 35.652
-//                Location.sharedInstance.longitude = 139.839
+//                Location.shared.latitude = 35.652
+//                Location.shared.longitude = 139.839
                 
                 // London
-//                Location.sharedInstance.latitude = 51.508530
-//                Location.sharedInstance.longitude = -0.076132
+//                Location.shared.latitude = 51.508530
+//                Location.shared.longitude = -0.076132
+                
+                // Sydney
+//                Location.shared.latitude = -33.8688
+//                Location.shared.longitude = 151.2093
+                
+                // New York
+//                Location.shared.latitude = 40.71
+//                Location.shared.longitude = -74.01
                 
                 currentWeather.downloadWeatherDetails {
                     self.downloadForecastData {
                         self.updateMainUI()
                     }
                 }
-                */
+                
             
                 print("No GPS")
             } else {
