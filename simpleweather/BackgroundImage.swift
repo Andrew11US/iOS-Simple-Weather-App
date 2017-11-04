@@ -21,7 +21,7 @@ class BackgroundImage: UIImageView {
         playAnimation()
     }
     
-    func playAnimation() {
+    @objc func playAnimation() {
         
         self.image = UIImage(named: "bg.jpg")
         

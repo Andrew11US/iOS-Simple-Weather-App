@@ -33,13 +33,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var maxTempLbl: UILabel!
     @IBOutlet weak var uvIndexLbl: UILabel!
     
-    var locationManager = CLLocationManager()
-    var currentLocation: CLLocation!
+    @objc var locationManager = CLLocationManager()
+    @objc var currentLocation: CLLocation!
     
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
     var forecasts = [Forecast]()
-    let altimeter = CMAltimeter()
+    @objc let altimeter = CMAltimeter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         }
     }
     
-    func locationAutoStatus() {
+    @objc func locationAutoStatus() {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             
@@ -142,7 +142,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
     }
     
-    func downloadForecastData(completed: @escaping DownloadComplete) {
+    @objc func downloadForecastData(completed: @escaping DownloadComplete) {
         // Downloading forecast weather data for TableView
         
         Alamofire.request(FORECAST_URL).responseJSON { response in
@@ -194,7 +194,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         }
     }
 
-    func updateMainUI() {
+    @objc func updateMainUI() {
         
         dateLbl.text = currentWeather.date
         currentTempLbl.text = currentWeather.currentTemp
@@ -229,7 +229,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         }
     }
     
-    func updateWeatherDetails() {
+    @objc func updateWeatherDetails() {
         
         if forecasts.count > 0 {
             forecasts.removeAll()
