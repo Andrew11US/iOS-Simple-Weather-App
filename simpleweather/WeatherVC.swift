@@ -81,10 +81,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                 let generator = UINotificationFeedbackGenerator()
                 generator.notificationOccurred(.warning)
                 
-                
                 // LA
-                Location.shared.latitude = 34.052235
-                Location.shared.longitude = -118.243683
+//                Location.shared.latitude = 34.052235
+//                Location.shared.longitude = -118.243683
                 
                 // Tokyo
 //                Location.shared.latitude = 35.652
@@ -101,6 +100,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                 // New York
 //                Location.shared.latitude = 40.71
 //                Location.shared.longitude = -74.01
+                
+                // Alaska
+//                Location.shared.latitude = 68.13
+//                Location.shared.longitude = -145.31
                 
                 currentWeather.downloadWeatherDetails {
                     self.downloadForecastData {
