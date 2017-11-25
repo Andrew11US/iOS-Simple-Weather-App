@@ -269,6 +269,12 @@
                                 <color key="textColor" red="0.2156862745" green="0.1960784314" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otu-RC-gDA">
+                                <rect key="frame" x="16" y="20" width="120" height="120"/>
+                                <connections>
+                                    <action selector="updateWeatherTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w98-hE-pNy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -281,6 +287,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="sl7-ql-N37" secondAttribute="trailing" id="KFF-Jf-lyh"/>
                             <constraint firstItem="m6v-rJ-Xlo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Q3z-vh-bIf"/>
                             <constraint firstItem="GUs-JC-YCN" firstAttribute="top" secondItem="m6v-rJ-Xlo" secondAttribute="bottom" id="UaJ-og-Zut"/>
+                            <constraint firstItem="otu-RC-gDA" firstAttribute="centerX" secondItem="yPp-Ue-QkI" secondAttribute="centerX" id="Vuo-WP-dsf"/>
+                            <constraint firstItem="otu-RC-gDA" firstAttribute="width" secondItem="yPp-Ue-QkI" secondAttribute="width" id="XEv-eK-W7g"/>
                             <constraint firstItem="3Gh-XA-izA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ajL-Ab-GFQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Gh-XA-izA" secondAttribute="trailing" id="bVN-Xz-pwu"/>
                             <constraint firstItem="m6v-rJ-Xlo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dej-up-UU8">
@@ -291,6 +299,7 @@
                                 <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="otu-RC-gDA" firstAttribute="height" secondItem="yPp-Ue-QkI" secondAttribute="height" id="eS2-7i-spg"/>
                             <constraint firstItem="3Gh-XA-izA" firstAttribute="leading" secondItem="m6v-rJ-Xlo" secondAttribute="trailing" constant="8" id="eWe-0f-DKI">
                                 <variation key="heightClass=compact-widthClass=compact" constant="8"/>
                             </constraint>
@@ -300,6 +309,7 @@
                                 <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="Esb-Us-3NS" firstAttribute="top" secondItem="3Gh-XA-izA" secondAttribute="bottom" constant="8" id="nyq-ci-iFL"/>
+                            <constraint firstItem="otu-RC-gDA" firstAttribute="centerY" secondItem="yPp-Ue-QkI" secondAttribute="centerY" id="uFf-ez-ohZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Esb-Us-3NS" secondAttribute="trailing" id="vAk-Cj-WOP"/>
                         </constraints>
                     </view>
@@ -313,6 +323,7 @@
                         <outlet property="locationLbl" destination="gA0-ke-KCg" id="Pzu-ia-drU"/>
                         <outlet property="pressureLbl" destination="rDC-O6-MLn" id="Bcs-G6-fjO"/>
                         <outlet property="tableView" destination="sl7-ql-N37" id="6Qa-Sw-4wr"/>
+                        <outlet property="updateWeather" destination="otu-RC-gDA" id="2Ng-Pt-VYu"/>
                         <outlet property="uvIndexLbl" destination="GuH-gg-wHz" id="anO-9I-tgS"/>
                         <outlet property="windLbl" destination="EVo-hi-AGw" id="H0d-yp-lhC"/>
                     </connections>

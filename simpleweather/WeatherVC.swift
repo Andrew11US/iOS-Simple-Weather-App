@@ -7,6 +7,7 @@
 //
 ///---Future releases---///
 //-> Barometer screen
+//-> Apple Watch version
 //-> AdMob
 
 import UIKit
@@ -208,8 +209,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         cloudinessLbl.text = currentWeather.cloudiness
         uvIndexLbl.text = currentWeather.uvIndex
         pressureLbl.text = currentWeather.pressure
-        currentWeatherImg.image = UIImage(named: currentWeather.weatherType)
-//        currentWeatherImg.image = UIImage(named: "Tornado")
+        
+        if currentWeather.weatherType == "Clear" && partOfDay() == "Night" {
+            currentWeatherImg.image = UIImage(named: "ClearNight")
+            
+        } else {
+            currentWeatherImg.image = UIImage(named: currentWeather.weatherType)
+        }
         
         if currentWeatherImg.image == nil {
             currentWeatherImg.image = UIImage(named: "NoCondition")
@@ -240,5 +246,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
         locationAutoStatus()
     }
+    
+    @IBAction func updateWeatherTapped(_ sender: UIButton) {
+        
+        if forecasts.count > 0 {
+            forecasts.removeAll()
+        }
+        
+        locationAutoStatus()
+    }
+    
 }
 
