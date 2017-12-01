@@ -16,6 +16,15 @@
 		90A410D61DC11F0D009C9238 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A410D51DC11F0D009C9238 /* Forecast.swift */; };
 		90A410D81DC12EEA009C9238 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A410D71DC12EEA009C9238 /* WeatherCell.swift */; };
 		90A410DB1DC139FB009C9238 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A410DA1DC139FB009C9238 /* Location.swift */; };
+		90B0CE091FD1E3BC0004DB2F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90B0CE071FD1E3BC0004DB2F /* Interface.storyboard */; };
+		90B0CE0B1FD1E3BC0004DB2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B0CE0A1FD1E3BC0004DB2F /* Assets.xcassets */; };
+		90B0CE121FD1E3BD0004DB2F /* WeatherGPS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 90B0CE111FD1E3BD0004DB2F /* WeatherGPS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		90B0CE171FD1E3BD0004DB2F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0CE161FD1E3BD0004DB2F /* InterfaceController.swift */; };
+		90B0CE191FD1E3BD0004DB2F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0CE181FD1E3BD0004DB2F /* ExtensionDelegate.swift */; };
+		90B0CE1B1FD1E3BD0004DB2F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0CE1A1FD1E3BD0004DB2F /* NotificationController.swift */; };
+		90B0CE1D1FD1E3BD0004DB2F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0CE1C1FD1E3BD0004DB2F /* ComplicationController.swift */; };
+		90B0CE1F1FD1E3BD0004DB2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B0CE1E1FD1E3BD0004DB2F /* Assets.xcassets */; };
+		90B0CE241FD1E3BD0004DB2F /* WeatherGPS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 90B0CE051FD1E3BC0004DB2F /* WeatherGPS.app */; };
 		90E466161DB3D80E00147235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E466151DB3D80E00147235 /* AppDelegate.swift */; };
 		90E466181DB3D80E00147235 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E466171DB3D80E00147235 /* WeatherVC.swift */; };
 		90E4661B1DB3D80E00147235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E466191DB3D80E00147235 /* Main.storyboard */; };
@@ -23,6 +32,48 @@
 		90E466201DB3D80E00147235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E4661E1DB3D80E00147235 /* LaunchScreen.storyboard */; };
 		DE649474FDCEAAB10B865E3A /* Pods_simpleweather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDA6E78715FD37577B847CB /* Pods_simpleweather.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90B0CE131FD1E3BD0004DB2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90E4660A1DB3D80E00147235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90B0CE101FD1E3BD0004DB2F;
+			remoteInfo = "WeatherGPS Extension";
+		};
+		90B0CE221FD1E3BD0004DB2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90E4660A1DB3D80E00147235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90B0CE041FD1E3BC0004DB2F;
+			remoteInfo = WeatherGPS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90B0CE2A1FD1E3BD0004DB2F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				90B0CE121FD1E3BD0004DB2F /* WeatherGPS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B0CE2C1FD1E3BD0004DB2F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				90B0CE241FD1E3BD0004DB2F /* WeatherGPS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08C3D1567169FA052191E062 /* Pods_simpleweatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleweatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +94,18 @@
 		90A410D51DC11F0D009C9238 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		90A410D71DC12EEA009C9238 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		90A410DA1DC139FB009C9238 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		90B0CE051FD1E3BC0004DB2F /* WeatherGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B0CE081FD1E3BC0004DB2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		90B0CE0A1FD1E3BC0004DB2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90B0CE0C1FD1E3BC0004DB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90B0CE111FD1E3BD0004DB2F /* WeatherGPS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WeatherGPS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B0CE161FD1E3BD0004DB2F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		90B0CE181FD1E3BD0004DB2F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		90B0CE1A1FD1E3BD0004DB2F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		90B0CE1C1FD1E3BD0004DB2F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		90B0CE1E1FD1E3BD0004DB2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90B0CE201FD1E3BD0004DB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90B0CE211FD1E3BD0004DB2F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		90E466121DB3D80E00147235 /* simpleweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E466151DB3D80E00147235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E466171DB3D80E00147235 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -53,6 +116,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		90B0CE0E1FD1E3BD0004DB2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90E4660F1DB3D80E00147235 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,10 +193,36 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		90B0CE061FD1E3BC0004DB2F /* WeatherGPS */ = {
+			isa = PBXGroup;
+			children = (
+				90B0CE071FD1E3BC0004DB2F /* Interface.storyboard */,
+				90B0CE0A1FD1E3BC0004DB2F /* Assets.xcassets */,
+				90B0CE0C1FD1E3BC0004DB2F /* Info.plist */,
+			);
+			path = WeatherGPS;
+			sourceTree = "<group>";
+		};
+		90B0CE151FD1E3BD0004DB2F /* WeatherGPS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				90B0CE161FD1E3BD0004DB2F /* InterfaceController.swift */,
+				90B0CE181FD1E3BD0004DB2F /* ExtensionDelegate.swift */,
+				90B0CE1A1FD1E3BD0004DB2F /* NotificationController.swift */,
+				90B0CE1C1FD1E3BD0004DB2F /* ComplicationController.swift */,
+				90B0CE1E1FD1E3BD0004DB2F /* Assets.xcassets */,
+				90B0CE201FD1E3BD0004DB2F /* Info.plist */,
+				90B0CE211FD1E3BD0004DB2F /* PushNotificationPayload.apns */,
+			);
+			path = "WeatherGPS Extension";
+			sourceTree = "<group>";
+		};
 		90E466091DB3D80E00147235 = {
 			isa = PBXGroup;
 			children = (
 				90E466141DB3D80E00147235 /* simpleweather */,
+				90B0CE061FD1E3BC0004DB2F /* WeatherGPS */,
+				90B0CE151FD1E3BD0004DB2F /* WeatherGPS Extension */,
 				90E466131DB3D80E00147235 /* Products */,
 				CC5538FAF6F82FA864D7C906 /* Pods */,
 				172D852C9E1AEC214BFC5760 /* Frameworks */,
@@ -137,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				90E466121DB3D80E00147235 /* simpleweather.app */,
+				90B0CE051FD1E3BC0004DB2F /* WeatherGPS.app */,
+				90B0CE111FD1E3BD0004DB2F /* WeatherGPS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +268,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		90B0CE041FD1E3BC0004DB2F /* WeatherGPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B0CE2B1FD1E3BD0004DB2F /* Build configuration list for PBXNativeTarget "WeatherGPS" */;
+			buildPhases = (
+				90B0CE031FD1E3BC0004DB2F /* Resources */,
+				90B0CE2A1FD1E3BD0004DB2F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90B0CE141FD1E3BD0004DB2F /* PBXTargetDependency */,
+			);
+			name = WeatherGPS;
+			productName = WeatherGPS;
+			productReference = 90B0CE051FD1E3BC0004DB2F /* WeatherGPS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		90B0CE101FD1E3BD0004DB2F /* WeatherGPS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B0CE291FD1E3BD0004DB2F /* Build configuration list for PBXNativeTarget "WeatherGPS Extension" */;
+			buildPhases = (
+				90B0CE0D1FD1E3BD0004DB2F /* Sources */,
+				90B0CE0E1FD1E3BD0004DB2F /* Frameworks */,
+				90B0CE0F1FD1E3BD0004DB2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WeatherGPS Extension";
+			productName = "WeatherGPS Extension";
+			productReference = 90B0CE111FD1E3BD0004DB2F /* WeatherGPS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		90E466111DB3D80E00147235 /* simpleweather */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90E4663A1DB3D80E00147235 /* Build configuration list for PBXNativeTarget "simpleweather" */;
@@ -180,10 +312,12 @@
 				90E466101DB3D80E00147235 /* Resources */,
 				0FBB18E48FE6767AAE9B0DFA /* [CP] Embed Pods Frameworks */,
 				A0E521FACA5912A477FFB204 /* [CP] Copy Pods Resources */,
+				90B0CE2C1FD1E3BD0004DB2F /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				90B0CE231FD1E3BD0004DB2F /* PBXTargetDependency */,
 			);
 			name = simpleweather;
 			productName = simpleweather;
@@ -196,10 +330,20 @@
 		90E4660A1DB3D80E00147235 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Andrii Halabuda";
 				TargetAttributes = {
+					90B0CE041FD1E3BC0004DB2F = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = PTRW36GG78;
+						ProvisioningStyle = Automatic;
+					};
+					90B0CE101FD1E3BD0004DB2F = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = PTRW36GG78;
+						ProvisioningStyle = Automatic;
+					};
 					90E466111DB3D80E00147235 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = PTRW36GG78;
@@ -222,11 +366,30 @@
 			projectRoot = "";
 			targets = (
 				90E466111DB3D80E00147235 /* simpleweather */,
+				90B0CE041FD1E3BC0004DB2F /* WeatherGPS */,
+				90B0CE101FD1E3BD0004DB2F /* WeatherGPS Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		90B0CE031FD1E3BC0004DB2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B0CE0B1FD1E3BC0004DB2F /* Assets.xcassets in Resources */,
+				90B0CE091FD1E3BC0004DB2F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B0CE0F1FD1E3BD0004DB2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B0CE1F1FD1E3BD0004DB2F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90E466101DB3D80E00147235 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +452,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		90B0CE0D1FD1E3BD0004DB2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B0CE1B1FD1E3BD0004DB2F /* NotificationController.swift in Sources */,
+				90B0CE1D1FD1E3BD0004DB2F /* ComplicationController.swift in Sources */,
+				90B0CE191FD1E3BD0004DB2F /* ExtensionDelegate.swift in Sources */,
+				90B0CE171FD1E3BD0004DB2F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90E4660E1DB3D80E00147235 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,7 +482,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		90B0CE141FD1E3BD0004DB2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90B0CE101FD1E3BD0004DB2F /* WeatherGPS Extension */;
+			targetProxy = 90B0CE131FD1E3BD0004DB2F /* PBXContainerItemProxy */;
+		};
+		90B0CE231FD1E3BD0004DB2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90B0CE041FD1E3BC0004DB2F /* WeatherGPS */;
+			targetProxy = 90B0CE221FD1E3BD0004DB2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		90B0CE071FD1E3BC0004DB2F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90B0CE081FD1E3BC0004DB2F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		90E466191DB3D80E00147235 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -328,6 +523,100 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		90B0CE251FD1E3BD0004DB2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTRW36GG78;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = WeatherGPS_Extension;
+				INFOPLIST_FILE = WeatherGPS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		90B0CE261FD1E3BD0004DB2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTRW36GG78;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = WeatherGPS_Extension;
+				INFOPLIST_FILE = WeatherGPS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
+		90B0CE271FD1E3BD0004DB2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTRW36GG78;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "WeatherGPS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		90B0CE281FD1E3BD0004DB2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTRW36GG78;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "WeatherGPS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
 		90E466381DB3D80E00147235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -480,6 +769,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		90B0CE291FD1E3BD0004DB2F /* Build configuration list for PBXNativeTarget "WeatherGPS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B0CE271FD1E3BD0004DB2F /* Debug */,
+				90B0CE281FD1E3BD0004DB2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90B0CE2B1FD1E3BD0004DB2F /* Build configuration list for PBXNativeTarget "WeatherGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B0CE251FD1E3BD0004DB2F /* Debug */,
+				90B0CE261FD1E3BD0004DB2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		90E4660D1DB3D80E00147235 /* Build configuration list for PBXProject "simpleweather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
