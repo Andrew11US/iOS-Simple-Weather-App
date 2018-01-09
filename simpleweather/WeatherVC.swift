@@ -83,8 +83,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                 generator.notificationOccurred(.warning)
                 
                 // LA
-//                Location.shared.latitude = 34.052235
-//                Location.shared.longitude = -118.243683
+                Location.shared.latitude = 34.052235
+                Location.shared.longitude = -118.243683
                 
                 // Tokyo
 //                Location.shared.latitude = 35.652

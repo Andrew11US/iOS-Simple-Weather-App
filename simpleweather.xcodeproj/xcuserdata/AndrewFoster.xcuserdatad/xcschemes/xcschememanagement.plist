@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>WeatherGPS (Complication).xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>WeatherGPS (Notification).xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
 		<key>WeatherGPS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -27,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>90B0CE041FD1E3BC0004DB2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>90E466111DB3D80E00147235</key>
 		<dict>
 			<key>primary</key>
