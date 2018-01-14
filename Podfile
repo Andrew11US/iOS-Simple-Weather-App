@@ -6,5 +6,6 @@ target 'simpleweather' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.5'
+  pod 'pop', '~> 1.0'
 
 end

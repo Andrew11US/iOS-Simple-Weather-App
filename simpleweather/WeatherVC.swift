@@ -204,11 +204,11 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         currentTempLbl.text = currentWeather.currentTemp
         currentWeatherTypeLbl.text = currentWeather.weatherType
         locationLbl.text = currentWeather.cityName
-        humidityLbl.text = currentWeather.humidity
-        windLbl.text = currentWeather.wind
-        cloudinessLbl.text = currentWeather.cloudiness
-        uvIndexLbl.text = currentWeather.uvIndex
-        pressureLbl.text = currentWeather.pressure
+//        humidityLbl.text = currentWeather.humidity
+//        windLbl.text = currentWeather.wind
+//        cloudinessLbl.text = currentWeather.cloudiness
+//        uvIndexLbl.text = currentWeather.uvIndex
+//        pressureLbl.text = currentWeather.pressure
         
         if currentWeather.weatherType == "Clear" && partOfDay() == "Night" {
             currentWeatherImg.image = UIImage(named: "ClearNight")

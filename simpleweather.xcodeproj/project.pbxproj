@@ -10,6 +10,9 @@
 		9000AF2E1FC9B29E00517D27 /* Baumans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9000AF2D1FC9B29D00517D27 /* Baumans-Regular.ttf */; };
 		9000AF301FC9E62C00517D27 /* PartOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000AF2F1FC9E62C00517D27 /* PartOfDay.swift */; };
 		90499F631F67FDEE008AFAD1 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90499F621F67FDEE008AFAD1 /* Barometer.swift */; };
+		904C6A4B200B83C900D9F5F9 /* BarometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A4A200B83C900D9F5F9 /* BarometerVC.swift */; };
+		904C6A4D200B83D700D9F5F9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A4C200B83D700D9F5F9 /* SettingsVC.swift */; };
+		904C6A52200B971E00D9F5F9 /* CustomButtonAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A51200B971E00D9F5F9 /* CustomButtonAnimated.swift */; };
 		9086DA7B1DBFEC870045C3F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086DA7A1DBFEC870045C3F4 /* Constants.swift */; };
 		9086DA7D1DBFEFBE0045C3F4 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086DA7C1DBFEFBE0045C3F4 /* CurrentWeather.swift */; };
 		909C22951DC238290098E1FB /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909C22941DC238290098E1FB /* BackgroundImage.swift */; };
@@ -50,6 +53,10 @@
 		9000AF2D1FC9B29D00517D27 /* Baumans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baumans-Regular.ttf"; sourceTree = "<group>"; };
 		9000AF2F1FC9E62C00517D27 /* PartOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfDay.swift; sourceTree = "<group>"; };
 		90499F621F67FDEE008AFAD1 /* Barometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
+		904C6A4A200B83C900D9F5F9 /* BarometerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerVC.swift; sourceTree = "<group>"; };
+		904C6A4C200B83D700D9F5F9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		904C6A4E200B963A00D9F5F9 /* simpleweather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "simpleweather-Bridging-Header.h"; sourceTree = "<group>"; };
+		904C6A51200B971E00D9F5F9 /* CustomButtonAnimated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonAnimated.swift; sourceTree = "<group>"; };
 		9086DA7A1DBFEC870045C3F4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9086DA7C1DBFEFBE0045C3F4 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		909C22941DC238290098E1FB /* BackgroundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 			children = (
 				90E466151DB3D80E00147235 /* AppDelegate.swift */,
 				90E466211DB3D80E00147235 /* Info.plist */,
+				904C6A4E200B963A00D9F5F9 /* simpleweather-Bridging-Header.h */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -108,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				90E466171DB3D80E00147235 /* WeatherVC.swift */,
+				904C6A4A200B83C900D9F5F9 /* BarometerVC.swift */,
+				904C6A4C200B83D700D9F5F9 /* SettingsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -119,6 +129,7 @@
 				90E466191DB3D80E00147235 /* Main.storyboard */,
 				90A410D71DC12EEA009C9238 /* WeatherCell.swift */,
 				909C22941DC238290098E1FB /* BackgroundImage.swift */,
+				904C6A51200B971E00D9F5F9 /* CustomButtonAnimated.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -217,7 +228,7 @@
 					90E466111DB3D80E00147235 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = PTRW36GG78;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -312,11 +323,14 @@
 				90A410D81DC12EEA009C9238 /* WeatherCell.swift in Sources */,
 				909C22951DC238290098E1FB /* BackgroundImage.swift in Sources */,
 				9000AF301FC9E62C00517D27 /* PartOfDay.swift in Sources */,
+				904C6A4D200B83D700D9F5F9 /* SettingsVC.swift in Sources */,
 				9086DA7D1DBFEFBE0045C3F4 /* CurrentWeather.swift in Sources */,
 				9086DA7B1DBFEC870045C3F4 /* Constants.swift in Sources */,
 				90499F631F67FDEE008AFAD1 /* Barometer.swift in Sources */,
 				90A410D61DC11F0D009C9238 /* Forecast.swift in Sources */,
 				90A410DB1DC139FB009C9238 /* Location.swift in Sources */,
+				904C6A52200B971E00D9F5F9 /* CustomButtonAnimated.swift in Sources */,
+				904C6A4B200B83C900D9F5F9 /* BarometerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +467,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -464,6 +479,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5c1b83b6-f453-46c7-a4c6-55d9f287f64e";
 				PROVISIONING_PROFILE_SPECIFIER = SimpleWeatherDevProfile;
+				SWIFT_OBJC_BRIDGING_HEADER = "simpleweather/simpleweather-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,6 +492,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -486,6 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e9a9a22a-0950-4cf2-b980-7c3dc15a12f5";
 				PROVISIONING_PROFILE_SPECIFIER = SimpleWeatherDistributionProfile;
+				SWIFT_OBJC_BRIDGING_HEADER = "simpleweather/simpleweather-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
