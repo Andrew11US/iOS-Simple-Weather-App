@@ -26,6 +26,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var background: BackgroundImage!
     @IBOutlet weak var updateWeather: UIButton!
+    @IBOutlet weak var menuBtn: CustomButton!
+    @IBOutlet weak var switchBtn: CustomButton!
     
     @IBOutlet weak var pressureLbl: UILabel!
     @IBOutlet weak var humidityLbl: UILabel!

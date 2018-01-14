@@ -10,6 +10,8 @@ import UIKit
 
 class BarometerVC: UIViewController {
 
+    @IBOutlet weak var menuBtn: CustomButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
