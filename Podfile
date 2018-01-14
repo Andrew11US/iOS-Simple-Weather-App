@@ -7,5 +7,6 @@ target 'simpleweather' do
 
   pod 'Alamofire', '~> 4.5'
   pod 'pop', '~> 1.0'
+  pod 'UICircularProgressRing'
 
 end
