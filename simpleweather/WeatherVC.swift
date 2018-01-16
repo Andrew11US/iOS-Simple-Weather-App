@@ -15,8 +15,9 @@ import CoreLocation
 import CoreMotion
 import Alamofire
 import Foundation
+import GoogleMobileAds
 
-class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, GADBannerViewDelegate {
 
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var currentTempLbl: UILabel!
@@ -39,6 +40,12 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @objc var locationManager = CLLocationManager()
     @objc var currentLocation: CLLocation!
     
+    // AdMob integration
+    @IBOutlet weak var banner: GADBannerView!
+    
+    let deviceId = "63795584de63e738e34c8c9c5f6b9ac4"
+    let adUnit = "ca-app-pub-5354322355853719/2522160133"
+    
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
     var forecasts = [Forecast]()
@@ -57,6 +64,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
         currentWeather = CurrentWeather()
         locationAutoStatus()
+        
+        // Admob
+        launchAdMob()
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -256,6 +266,21 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         }
         
         locationAutoStatus()
+    }
+    
+    // Banner Ad loader
+    func loadAd(adUnitID: String) {
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID, deviceId]
+        
+        banner.adUnitID = adUnitID
+        banner.load(request)
+    }
+    
+    func launchAdMob() {
+        banner.rootViewController = self
+        banner.delegate = self
+        loadAd(adUnitID: adUnit)
     }
     
 }

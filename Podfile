@@ -8,5 +8,7 @@ target 'simpleweather' do
   pod 'Alamofire', '~> 4.5'
   pod 'pop', '~> 1.0'
   pod 'UICircularProgressRing'
+  pod 'Firebase/Core'
+  pod 'Google-Mobile-Ads-SDK'
 
 end
