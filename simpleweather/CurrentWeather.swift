@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class CurrentWeather {
+open class CurrentWeather {
     var _cityName: String!
     var _date: String!
     var _weatherType: String!
@@ -37,7 +37,7 @@ class CurrentWeather {
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         let currentDate = dateFormatter.string(from: Date())
-        self._date = "Today \(currentDate)"
+        self._date = "\(currentDate)"
         
         return _date
     }

@@ -10,24 +10,31 @@ import UIKit
 import Foundation
 import CoreMotion
 
-//let altimeter = CMAltimeter()
-//
-//func getPressure() {
-//    
-//    if CMAltimeter.isRelativeAltitudeAvailable() {
-//        
-//        altimeter.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler: { data, error in
-//            
-//            if error != nil {
-//                print("Error occured!")
-//                
-//            } else {
-//                print("Pressure:", String(describing: data?.pressure))
-//            }
-//        })
-//        
-//    } else {
-//        
-//        print("Unable to get pressure from device or data is unavailable!")
-//    }
-//}
+let altimeter = CMAltimeter()
+var pressureData = 0
+var pressureTorr = 0
+
+func getPressure() {
+    
+    if CMAltimeter.isRelativeAltitudeAvailable() {
+        
+        altimeter.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler: { data, error in
+            
+            if error != nil {
+                print("Error occured!")
+                
+            } else {
+                print("Pressure:", String(describing: data?.pressure))
+                if let pressure = data?.pressure {
+                    pressureData = Int(truncating: pressure)
+                    pressureTorr = Int(7.5 * Double(pressureData))
+                }
+            }
+        })
+        
+    } else {
+        
+        print("Unable to get pressure from device or data is unavailable!")
+    }
+}
+

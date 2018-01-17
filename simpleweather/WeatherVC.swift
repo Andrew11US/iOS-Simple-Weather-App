@@ -30,13 +30,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var menuBtn: CustomButton!
     @IBOutlet weak var switchBtn: CustomButton!
     
-    @IBOutlet weak var pressureLbl: UILabel!
-    @IBOutlet weak var humidityLbl: UILabel!
-    @IBOutlet weak var windLbl: UILabel!
-    @IBOutlet weak var cloudinessLbl: UILabel!
-    @IBOutlet weak var maxTempLbl: UILabel!
-    @IBOutlet weak var uvIndexLbl: UILabel!
-    
     @objc var locationManager = CLLocationManager()
     @objc var currentLocation: CLLocation!
     
@@ -49,7 +42,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
     var forecasts = [Forecast]()
-    @objc let altimeter = CMAltimeter()
+    let altimeter = CMAltimeter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +60,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
         // Admob
         launchAdMob()
+        
+        getPressure()
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -239,11 +234,11 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             currentWeatherTypeLbl.text = "No"
             locationLbl.text = "Connection :("
             currentTempLbl.text = "--"
-            humidityLbl.text = "--"
-            windLbl.text = "--"
-            cloudinessLbl.text = "--"
-            uvIndexLbl.text = "--"
-            pressureLbl.text = "--"
+//            humidityLbl.text = "--"
+//            windLbl.text = "--"
+//            cloudinessLbl.text = "--"
+//            uvIndexLbl.text = "--"
+//            pressureLbl.text = "--"
             
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.warning)
