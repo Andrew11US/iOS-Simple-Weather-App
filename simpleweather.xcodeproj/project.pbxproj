@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9000AF2E1FC9B29E00517D27 /* Baumans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9000AF2D1FC9B29D00517D27 /* Baumans-Regular.ttf */; };
 		9000AF301FC9E62C00517D27 /* PartOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000AF2F1FC9E62C00517D27 /* PartOfDay.swift */; };
+		902DF25F201B845600C7B458 /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DF25E201B845600C7B458 /* CustomImage.swift */; };
 		90499F631F67FDEE008AFAD1 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90499F621F67FDEE008AFAD1 /* Barometer.swift */; };
 		904C6A4B200B83C900D9F5F9 /* BarometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A4A200B83C900D9F5F9 /* BarometerVC.swift */; };
 		904C6A4D200B83D700D9F5F9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A4C200B83D700D9F5F9 /* SettingsVC.swift */; };
@@ -19,7 +20,8 @@
 		90A410D61DC11F0D009C9238 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A410D51DC11F0D009C9238 /* Forecast.swift */; };
 		90A410D81DC12EEA009C9238 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A410D71DC12EEA009C9238 /* WeatherCell.swift */; };
 		90A410DB1DC139FB009C9238 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A410DA1DC139FB009C9238 /* Location.swift */; };
-		90A94F18201B66D100F901F3 /* Material Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A94F17201B66D100F901F3 /* Material Design.swift */; };
+		90A94F1B201B762900F901F3 /* Muli-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90A94F19201B762800F901F3 /* Muli-ExtraBold.ttf */; };
+		90A94F1C201B762900F901F3 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90A94F1A201B762800F901F3 /* Muli-Bold.ttf */; };
 		90D7E6B2200EB20B00A6AF81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90D7E6B1200EB20B00A6AF81 /* GoogleService-Info.plist */; };
 		90E466161DB3D80E00147235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E466151DB3D80E00147235 /* AppDelegate.swift */; };
 		90E466181DB3D80E00147235 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E466171DB3D80E00147235 /* WeatherVC.swift */; };
@@ -54,6 +56,7 @@
 		8AA69638B09DEA8A5ECFC1EF /* Pods-simpleweather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleweather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simpleweather/Pods-simpleweather.debug.xcconfig"; sourceTree = "<group>"; };
 		9000AF2D1FC9B29D00517D27 /* Baumans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baumans-Regular.ttf"; sourceTree = "<group>"; };
 		9000AF2F1FC9E62C00517D27 /* PartOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfDay.swift; sourceTree = "<group>"; };
+		902DF25E201B845600C7B458 /* CustomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImage.swift; sourceTree = "<group>"; };
 		90499F621F67FDEE008AFAD1 /* Barometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
 		904C6A4A200B83C900D9F5F9 /* BarometerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerVC.swift; sourceTree = "<group>"; };
 		904C6A4C200B83D700D9F5F9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -65,7 +68,8 @@
 		90A410D51DC11F0D009C9238 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		90A410D71DC12EEA009C9238 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		90A410DA1DC139FB009C9238 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		90A94F17201B66D100F901F3 /* Material Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Material Design.swift"; sourceTree = "<group>"; };
+		90A94F19201B762800F901F3 /* Muli-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraBold.ttf"; sourceTree = "<group>"; };
+		90A94F1A201B762800F901F3 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
 		90D7E6B1200EB20B00A6AF81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90E466121DB3D80E00147235 /* simpleweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E466151DB3D80E00147235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		9000AF2C1FC9B28100517D27 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				90A94F1A201B762800F901F3 /* Muli-Bold.ttf */,
+				90A94F19201B762800F901F3 /* Muli-ExtraBold.ttf */,
 				9000AF2D1FC9B29D00517D27 /* Baumans-Regular.ttf */,
 			);
 			name = Fonts;
@@ -135,7 +141,7 @@
 				90A410D71DC12EEA009C9238 /* WeatherCell.swift */,
 				909C22941DC238290098E1FB /* BackgroundImage.swift */,
 				904C6A51200B971E00D9F5F9 /* CustomButtonAnimated.swift */,
-				90A94F17201B66D100F901F3 /* Material Design.swift */,
+				902DF25E201B845600C7B458 /* CustomImage.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -267,6 +273,8 @@
 				90D7E6B2200EB20B00A6AF81 /* GoogleService-Info.plist in Resources */,
 				90E4661D1DB3D80E00147235 /* Assets.xcassets in Resources */,
 				90E4661B1DB3D80E00147235 /* Main.storyboard in Resources */,
+				90A94F1C201B762900F901F3 /* Muli-Bold.ttf in Resources */,
+				90A94F1B201B762900F901F3 /* Muli-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,9 +358,9 @@
 				90499F631F67FDEE008AFAD1 /* Barometer.swift in Sources */,
 				90A410D61DC11F0D009C9238 /* Forecast.swift in Sources */,
 				90A410DB1DC139FB009C9238 /* Location.swift in Sources */,
+				902DF25F201B845600C7B458 /* CustomImage.swift in Sources */,
 				904C6A52200B971E00D9F5F9 /* CustomButtonAnimated.swift in Sources */,
 				904C6A4B200B83C900D9F5F9 /* BarometerVC.swift in Sources */,
-				90A94F18201B66D100F901F3 /* Material Design.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

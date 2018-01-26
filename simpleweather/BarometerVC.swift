@@ -26,10 +26,16 @@ class BarometerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setNeedsStatusBarAppearanceUpdate()
+        
         currentWeather = CurrentWeather()
         
 //        updateMainUI()
         self.pressureCentralLbl.text = String(pressureTorr)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewDidAppear(_ animated: Bool) {

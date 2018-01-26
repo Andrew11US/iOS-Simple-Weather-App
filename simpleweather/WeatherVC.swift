@@ -50,6 +50,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setNeedsStatusBarAppearanceUpdate()
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         //locationManager.requestWhenInUseAuthorization()
@@ -65,6 +67,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         launchAdMob()
         
         getPressure()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -238,7 +244,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
         if forecasts.count == 0 {
             currentWeatherImg.image = UIImage(named: "No")
-            currentWeatherTypeLbl.text = "No"
+            currentWeatherTypeLbl.text = "is not available"
             locationLbl.text = "Connection :("
             currentTempLbl.text = "--"
             humidityLbl.text = "--"
