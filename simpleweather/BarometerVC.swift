@@ -54,11 +54,11 @@ class BarometerVC: UIViewController {
     
     func updateMainUI() {
         
-        humidityLbl.text = currentWeather.humidity
-        windLbl.text = currentWeather.wind
-        cloudinessLbl.text = currentWeather.cloudiness
-        uvIndexLbl.text = currentWeather.uvIndex
-        pressureLbl.text = currentWeather.pressure
+//        humidityLbl.text = currentWeather.humidity
+//        windLbl.text = currentWeather.wind
+//        cloudinessLbl.text = currentWeather.cloudiness
+//        uvIndexLbl.text = currentWeather.uvIndex
+//        pressureLbl.text = currentWeather.pressure
         
     }
 

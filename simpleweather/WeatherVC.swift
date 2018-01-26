@@ -29,6 +29,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var updateWeather: UIButton!
     @IBOutlet weak var menuBtn: CustomButton!
     @IBOutlet weak var switchBtn: CustomButton!
+    @IBOutlet weak var humidityLbl: UILabel!
+    @IBOutlet weak var windLbl: UILabel!
+    @IBOutlet weak var cloudinessLbl: UILabel!
     
     @objc var locationManager = CLLocationManager()
     @objc var currentLocation: CLLocation!
@@ -185,6 +188,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         return forecasts.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherCell {
             
@@ -211,9 +218,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         currentTempLbl.text = currentWeather.currentTemp
         currentWeatherTypeLbl.text = currentWeather.weatherType
         locationLbl.text = currentWeather.cityName
-//        humidityLbl.text = currentWeather.humidity
-//        windLbl.text = currentWeather.wind
-//        cloudinessLbl.text = currentWeather.cloudiness
+        humidityLbl.text = "\(currentWeather.humidity)%"
+        windLbl.text = "\(currentWeather.wind) m/s"
+        cloudinessLbl.text = "\(currentWeather.cloudiness)%"
 //        uvIndexLbl.text = currentWeather.uvIndex
 //        pressureLbl.text = currentWeather.pressure
         
@@ -234,9 +241,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             currentWeatherTypeLbl.text = "No"
             locationLbl.text = "Connection :("
             currentTempLbl.text = "--"
-//            humidityLbl.text = "--"
-//            windLbl.text = "--"
-//            cloudinessLbl.text = "--"
+            humidityLbl.text = "--"
+            windLbl.text = "--"
+            cloudinessLbl.text = "--"
 //            uvIndexLbl.text = "--"
 //            pressureLbl.text = "--"
             
