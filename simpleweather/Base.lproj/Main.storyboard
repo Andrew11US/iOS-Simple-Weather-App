@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -33,11 +33,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sl7-ql-N37">
-                                <rect key="frame" x="16" y="319" width="343" height="451"/>
+                                <rect key="frame" x="16" y="295" width="343" height="364"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -45,17 +45,17 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MAR-sT-a5C" id="7rP-A3-Ode">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="69.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1u-Qm-SKR">
-                                                    <rect key="frame" x="20" y="13" width="240" height="44"/>
+                                                    <rect key="frame" x="20" y="13" width="625" height="44"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="QmV-BM-Hlt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="565" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Rtq-Lp-HW0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="565" height="44"/>
                                                                     <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="20"/>
                                                                     <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mfc-Zz-Pc9">
-                                                            <rect key="frame" x="180" y="0.0" width="60" height="44"/>
+                                                            <rect key="frame" x="565" y="0.0" width="60" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Te3-bP-PJV">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="44"/>
@@ -85,7 +85,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TaQ-Mk-OHJ">
-                                                    <rect key="frame" x="270" y="10.666666666666664" width="50" height="50"/>
+                                                    <rect key="frame" x="655" y="10.5" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="jZ5-mf-MFN"/>
                                                         <constraint firstAttribute="height" constant="50" id="nGA-M9-3hb"/>
@@ -115,7 +115,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astronomyBg" translatesAutoresizingMaskIntoConstraints="NO" id="SUS-if-apm" customClass="CustomImage" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="319"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.80000000000000004"/>
@@ -127,7 +127,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" image="astronomyiPad"/>
                             </imageView>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="m6v-rJ-Xlo">
-                                <rect key="frame" x="87.666666666666686" y="174" width="200" height="100"/>
+                                <rect key="frame" x="87.5" y="150" width="200" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y57-BK-8XC">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
@@ -153,7 +153,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3Gh-XA-izA">
-                                <rect key="frame" x="26" y="64" width="253" height="100"/>
+                                <rect key="frame" x="26" y="40" width="253" height="100"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="gA0-ke-KCg">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="44"/>
@@ -185,7 +185,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="c48-Bo-SaV">
-                                <rect key="frame" x="16" y="279" width="343" height="30"/>
+                                <rect key="frame" x="16" y="255" width="343" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e8B-aT-S61">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
@@ -209,7 +209,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l45-lJ-KYQ">
-                                        <rect key="frame" x="131.66666666666666" y="0.0" width="80" height="30"/>
+                                        <rect key="frame" x="131.5" y="0.0" width="80" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SmallIcons2" translatesAutoresizingMaskIntoConstraints="NO" id="4GR-jD-FPL">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -253,13 +253,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otu-RC-gDA">
-                                <rect key="frame" x="87.666666666666686" y="174" width="100" height="100"/>
+                                <rect key="frame" x="87.5" y="150" width="100" height="100"/>
                                 <connections>
                                     <action selector="updateWeatherTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w98-hE-pNy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1u-Pr-MH4" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="309" y="61" width="50" height="50"/>
+                                <rect key="frame" x="309" y="37" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dBo-re-LWG"/>
                                     <constraint firstAttribute="width" constant="50" id="kBN-yi-LgA"/>
@@ -270,7 +270,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trx-2p-099" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="335" y="164" width="40" height="120"/>
+                                <rect key="frame" x="335" y="140" width="40" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="1hz-mn-3Lo"/>
                                     <constraint firstAttribute="height" constant="120" id="feQ-3Q-Vsj"/>
@@ -281,7 +281,7 @@
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-6s-7KY" customClass="GADBannerView">
-                                <rect key="frame" x="27.666666666666657" y="728" width="320" height="50"/>
+                                <rect key="frame" x="27.5" y="617" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LIs-XV-k19"/>
@@ -351,11 +351,11 @@
                         <viewControllerLayoutGuide type="bottom" id="PDq-QH-cxV"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="gln-5z-pol">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astronomyBg" translatesAutoresizingMaskIntoConstraints="NO" id="gcB-fJ-sPY" customClass="CustomImage" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="358"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                         <real key="value" value="3"/>
@@ -367,7 +367,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" image="astronomyiPad"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-PF-WJA" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="178" width="40" height="120"/>
+                                <rect key="frame" x="0.0" y="154" width="40" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="5Hk-jW-6Fj"/>
                                     <constraint firstAttribute="width" constant="40" id="NG1-Af-RZ3"/>
@@ -378,7 +378,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ej9-jn-8e3">
-                                <rect key="frame" x="26" y="64" width="253" height="44"/>
+                                <rect key="frame" x="26" y="40" width="253" height="44"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barometer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-55-hlf">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="44"/>
@@ -392,7 +392,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsa-Lp-pc4" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="309" y="61" width="50" height="50"/>
+                                <rect key="frame" x="309" y="37" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="H5R-ZO-Dwa"/>
                                     <constraint firstAttribute="height" constant="50" id="jKt-XQ-W2y"/>
@@ -403,7 +403,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-5C-j6s">
-                                <rect key="frame" x="175.66666666666666" y="368" width="23.666666666666657" height="30"/>
+                                <rect key="frame" x="175.5" y="344" width="24" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="joW-ps-abi"/>
                                 </constraints>
@@ -412,10 +412,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EW4-NK-8Xb" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
-                                <rect key="frame" x="87.666666666666686" y="138" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="114" width="200" height="200"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vOB-1O-ONk">
-                                        <rect key="frame" x="20" y="60" width="160.33333333333334" height="80"/>
+                                        <rect key="frame" x="20" y="60" width="160.5" height="80"/>
                                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="48"/>
                                         <color key="textColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -502,11 +502,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Iyq-Zb-XIe"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="W9o-mK-D3s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VwI-fe-rs8">
-                                <rect key="frame" x="26" y="64" width="253" height="44"/>
+                                <rect key="frame" x="26" y="40" width="253" height="44"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="R27-7c-tGz">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="44"/>
@@ -520,7 +520,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AK-Gi-evg" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="309" y="61" width="50" height="50"/>
+                                <rect key="frame" x="309" y="37" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QU3-dv-UrL"/>
                                     <constraint firstAttribute="width" constant="50" id="k3F-Iu-P4Q"/>
@@ -531,7 +531,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmh-sw-bL5">
-                                <rect key="frame" x="26" y="138" width="264" height="30"/>
+                                <rect key="frame" x="26" y="114" width="264" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rJK-dm-9cD"/>
                                 </constraints>
@@ -540,20 +540,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch between Celsius ℃ and Fahrenheit ℉ scale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-Lk-UMk">
-                                <rect key="frame" x="26" y="168" width="323" height="12.666666666666657"/>
+                                <rect key="frame" x="26" y="144" width="323" height="13"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFr-Z8-QIS">
-                                <rect key="frame" x="300" y="138" width="51" height="31"/>
+                                <rect key="frame" x="300" y="114" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0025946430396288633" green="0.41398322582244873" blue="0.67561322450637817" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="scaleSwitchChanged:" destination="it6-Dw-ep3" eventType="valueChanged" id="rWn-x0-u3P"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn off Ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjt-Jx-M22">
-                                <rect key="frame" x="26" y="200.66666666666666" width="253" height="30"/>
+                                <rect key="frame" x="26" y="177" width="253" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QlK-Cs-zDk"/>
                                 </constraints>
@@ -562,7 +562,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcg-QK-8li" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="289" y="200.66666666666666" width="70" height="30"/>
+                                <rect key="frame" x="289" y="177" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CAl-Cy-m6j"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="70" id="mJB-WX-fTJ"/>
@@ -584,7 +584,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpE-9n-3eC">
-                                <rect key="frame" x="26" y="250.66666666666663" width="142" height="30"/>
+                                <rect key="frame" x="26" y="227" width="142" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="X92-jl-G2M"/>
                                     <constraint firstAttribute="height" constant="30" id="fOf-4Y-Yqc"/>
