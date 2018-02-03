@@ -170,8 +170,10 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
         if adFreePurchaseMade {
             // Close Ad
             payButton.setTitle("Done", for: .normal)
+            payButton.setTitleColor(.white, for: .normal)
             payButton.isEnabled = false
             payButton.layer.backgroundColor = UIColor(red: 1/255, green: 106/255, blue: 172/255, alpha: 1.0).cgColor
+            payButton.layer.borderWidth = 0
         }
     }
 
