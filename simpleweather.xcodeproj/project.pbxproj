@@ -22,6 +22,9 @@
 		90A410DB1DC139FB009C9238 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A410DA1DC139FB009C9238 /* Location.swift */; };
 		90A94F1B201B762900F901F3 /* Muli-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90A94F19201B762800F901F3 /* Muli-ExtraBold.ttf */; };
 		90A94F1C201B762900F901F3 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90A94F1A201B762800F901F3 /* Muli-Bold.ttf */; };
+		90C1EFCA20260C1800F221CB /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C1EFC820260C1700F221CB /* Muli-Regular.ttf */; };
+		90C1EFCB20260C1800F221CB /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C1EFC920260C1700F221CB /* Muli-Light.ttf */; };
+		90C1EFCD2026355000F221CB /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1EFCC2026355000F221CB /* GlobalData.swift */; };
 		90D7E6B2200EB20B00A6AF81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90D7E6B1200EB20B00A6AF81 /* GoogleService-Info.plist */; };
 		90E466161DB3D80E00147235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E466151DB3D80E00147235 /* AppDelegate.swift */; };
 		90E466181DB3D80E00147235 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E466171DB3D80E00147235 /* WeatherVC.swift */; };
@@ -70,6 +73,9 @@
 		90A410DA1DC139FB009C9238 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		90A94F19201B762800F901F3 /* Muli-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraBold.ttf"; sourceTree = "<group>"; };
 		90A94F1A201B762800F901F3 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
+		90C1EFC820260C1700F221CB /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
+		90C1EFC920260C1700F221CB /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
+		90C1EFCC2026355000F221CB /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		90D7E6B1200EB20B00A6AF81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90E466121DB3D80E00147235 /* simpleweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E466151DB3D80E00147235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 			children = (
 				90A94F1A201B762800F901F3 /* Muli-Bold.ttf */,
 				90A94F19201B762800F901F3 /* Muli-ExtraBold.ttf */,
+				90C1EFC920260C1700F221CB /* Muli-Light.ttf */,
+				90C1EFC820260C1700F221CB /* Muli-Regular.ttf */,
 				9000AF2D1FC9B29D00517D27 /* Baumans-Regular.ttf */,
 			);
 			name = Fonts;
@@ -155,6 +163,7 @@
 				90A410DA1DC139FB009C9238 /* Location.swift */,
 				90499F621F67FDEE008AFAD1 /* Barometer.swift */,
 				9000AF2F1FC9E62C00517D27 /* PartOfDay.swift */,
+				90C1EFCC2026355000F221CB /* GlobalData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -270,7 +279,9 @@
 			files = (
 				90E466201DB3D80E00147235 /* LaunchScreen.storyboard in Resources */,
 				9000AF2E1FC9B29E00517D27 /* Baumans-Regular.ttf in Resources */,
+				90C1EFCA20260C1800F221CB /* Muli-Regular.ttf in Resources */,
 				90D7E6B2200EB20B00A6AF81 /* GoogleService-Info.plist in Resources */,
+				90C1EFCB20260C1800F221CB /* Muli-Light.ttf in Resources */,
 				90E4661D1DB3D80E00147235 /* Assets.xcassets in Resources */,
 				90E4661B1DB3D80E00147235 /* Main.storyboard in Resources */,
 				90A94F1C201B762900F901F3 /* Muli-Bold.ttf in Resources */,
@@ -353,6 +364,7 @@
 				909C22951DC238290098E1FB /* BackgroundImage.swift in Sources */,
 				9000AF301FC9E62C00517D27 /* PartOfDay.swift in Sources */,
 				904C6A4D200B83D700D9F5F9 /* SettingsVC.swift in Sources */,
+				90C1EFCD2026355000F221CB /* GlobalData.swift in Sources */,
 				9086DA7D1DBFEFBE0045C3F4 /* CurrentWeather.swift in Sources */,
 				9086DA7B1DBFEC870045C3F4 /* Constants.swift in Sources */,
 				90499F631F67FDEE008AFAD1 /* Barometer.swift in Sources */,

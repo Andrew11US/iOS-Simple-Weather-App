@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>3.0</string>
 	<key>CFBundleVersion</key>
-	<string>29</string>
+	<string>30</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -34,6 +34,8 @@
 		<string>Baumans-Regular.ttf</string>
 		<string>Muli-ExtraBold.ttf</string>
 		<string>Muli-Bold.ttf</string>
+		<string>Muli-Light.ttf</string>
+		<string>Muli-Regular.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

@@ -21,10 +21,10 @@ func getPressure() {
         altimeter.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler: { data, error in
             
             if error != nil {
-                print("Error occured!")
+                print("Error occured while loading data!")
                 
             } else {
-                print("Pressure:", String(describing: data?.pressure))
+//                print("Pressure:", String(describing: data?.pressure))
                 if let pressure = data?.pressure {
                     pressureData = Int(truncating: pressure)
                     pressureTorr = Int(7.5 * Double(pressureData))
@@ -33,8 +33,7 @@ func getPressure() {
         })
         
     } else {
-        
-        print("Unable to get pressure from device or data is unavailable!")
+        print("Altimeter is not available for this device")
     }
 }
 

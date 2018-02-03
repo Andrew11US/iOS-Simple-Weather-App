@@ -66,7 +66,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         // Admob
         launchAdMob()
         
-        getPressure()
+        print(celsiusSelected)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

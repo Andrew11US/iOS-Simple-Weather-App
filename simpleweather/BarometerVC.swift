@@ -11,61 +11,50 @@ import UICircularProgressRing
 
 class BarometerVC: UIViewController {
     
-    @IBOutlet weak var pressureLbl: UILabel!
-    @IBOutlet weak var humidityLbl: UILabel!
-    @IBOutlet weak var windLbl: UILabel!
-    @IBOutlet weak var cloudinessLbl: UILabel!
-    @IBOutlet weak var uvIndexLbl: UILabel!
     @IBOutlet weak var pressureCentralLbl: UILabel!
-
+    @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var menuBtn: CustomButton!
     @IBOutlet weak var circleBar: UICircularProgressRingView!
-    
-    var currentWeather: CurrentWeather!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setNeedsStatusBarAppearanceUpdate()
         
-        currentWeather = CurrentWeather()
+        getPressure()
+        errorLbl.text = handleError(type: 0)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-//        updateMainUI()
-        self.pressureCentralLbl.text = String(pressureTorr)
+        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
+            
+            self.errorLbl.isHidden = true
+            print("P:", pressureData)
+            self.pressureCentralLbl.text = String(pressureTorr)
+            self.circleBar.setProgress(value: CGFloat(pressureTorr), animationDuration: 1.0, completion: {
+                print("Animated!")
+            })
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    func handleError(type: Int)-> String {
         
-        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (timer) in
-
-            print("P:", pressureData)
-            self.circleBar.setProgress(value: CGFloat(pressureTorr), animationDuration: 1.0, completion: {
-                print("Animated!")
-            })
+        errorLbl.isHidden = false
+        
+        if type == 0 {
+            return "Calculating..."
+            
+        } else if type == 1 {
+            return "Unable to load barometer data"
+        } else {
+            return "--"
         }
-        updateMainUI()
-//        animate()
-    }
-
-    func animate() {
-        circleBar.setProgress(value: 750, animationDuration: 1.0) {
-            print("Done animating!")
-        }
-    }
-    
-    func updateMainUI() {
-        
-//        humidityLbl.text = currentWeather.humidity
-//        windLbl.text = currentWeather.wind
-//        cloudinessLbl.text = currentWeather.cloudiness
-//        uvIndexLbl.text = currentWeather.uvIndex
-//        pressureLbl.text = currentWeather.pressure
-        
     }
 
 }

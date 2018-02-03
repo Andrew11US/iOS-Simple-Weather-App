@@ -50,20 +50,29 @@ class Forecast {
             
             if let min = temp["min"] as? Double {
                 
-                let kelvinToCelsiusRaw = (min - 273.15)
+                if celsiusSelected {
+                    let kelvinToCelsiusRaw = (min - 273.15)
+                    let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
+                    self._lowTemp = "\(Int(kelvinToCelsius))"
+                } else {
+                    let kelvinToFahrenheitRaw = ((min * 1.8) - 459.67)
+                    let kelvinToFahrenheit = Double(round(10 * kelvinToFahrenheitRaw/10))
+                    self._lowTemp = String(Int(kelvinToFahrenheit))
+                }
                 
-                let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
-                
-                self._lowTemp = "\(Int(kelvinToCelsius))"
             }
             
             if let max = temp["max"] as? Double {
                 
-                let kelvinToCelsiusRaw = (max - 273.15)
-                
-                let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
-                
-                self._highTemp = "\(Int(kelvinToCelsius))"
+                if celsiusSelected {
+                    let kelvinToCelsiusRaw = (max - 273.15)
+                    let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
+                    self._highTemp = "\(Int(kelvinToCelsius))"
+                } else {
+                    let kelvinToFahrenheitRaw = ((max * 1.8) - 459.67)
+                    let kelvinToFahrenheit = Double(round(10 * kelvinToFahrenheitRaw/10))
+                    self._highTemp = String(Int(kelvinToFahrenheit))
+                }
                 
             }
         

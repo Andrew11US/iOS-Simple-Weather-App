@@ -147,10 +147,17 @@ open class CurrentWeather {
                     
                     if let currentTemperature = main["temp"] as? Double {
                         
-                        let kelvinToCelsiusRaw = (currentTemperature - 273.15)
-                        let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
-                        self._currentTemp = String(Int(kelvinToCelsius))
-                        print("Temp:", self._currentTemp)
+                        if celsiusSelected {
+                            let kelvinToCelsiusRaw = (currentTemperature - 273.15)
+                            let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
+                            self._currentTemp = String(Int(kelvinToCelsius))
+                            print("Temp:", self._currentTemp)
+                        } else {
+                            let kelvinToFahrenheitRaw = ((currentTemperature * 1.8) - 459.67)
+                            let kelvinToFahrenheit = Double(round(10 * kelvinToFahrenheitRaw/10))
+                            self._currentTemp = String(Int(kelvinToFahrenheit))
+                            print("Temp:", self._currentTemp)
+                        }
                     }
                     
                     if let pressure = main["pressure"] as? Double {

@@ -19,6 +19,9 @@
         <array key="Muli-ExtraBold.ttf">
             <string>Muli-ExtraBold</string>
         </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--WeatherVC-->
@@ -111,7 +114,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherBg" translatesAutoresizingMaskIntoConstraints="NO" id="SUS-if-apm" customClass="CustomImage" customModule="simpleweather" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astronomyBg" translatesAutoresizingMaskIntoConstraints="NO" id="SUS-if-apm" customClass="CustomImage" customModule="simpleweather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
@@ -121,6 +124,7 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" image="astronomyBgIpad"/>
                             </imageView>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="m6v-rJ-Xlo">
                                 <rect key="frame" x="87.5" y="142" width="200" height="100"/>
@@ -350,10 +354,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherBg" translatesAutoresizingMaskIntoConstraints="NO" id="gcB-fJ-sPY" customClass="CustomImage" customModule="simpleweather" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astronomyBg" translatesAutoresizingMaskIntoConstraints="NO" id="gcB-fJ-sPY" customClass="CustomImage" customModule="simpleweather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
@@ -398,12 +401,12 @@
                                     <segue destination="it6-Dw-ep3" kind="presentation" modalTransitionStyle="crossDissolve" id="N8U-n9-HXH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-5C-j6s">
-                                <rect key="frame" x="92" y="344" width="191" height="30"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-5C-j6s">
+                                <rect key="frame" x="177" y="344" width="21.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="joW-ps-abi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Baumans-Regular" family="Baumans" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -480,6 +483,7 @@
                     </view>
                     <connections>
                         <outlet property="circleBar" destination="EW4-NK-8Xb" id="fGg-k0-xCK"/>
+                        <outlet property="errorLbl" destination="dIM-5C-j6s" id="gn0-QO-sGg"/>
                         <outlet property="menuBtn" destination="tsa-Lp-pc4" id="fpe-9V-FyD"/>
                         <outlet property="pressureCentralLbl" destination="vOB-1O-ONk" id="k0y-zE-uZD"/>
                     </connections>
@@ -525,16 +529,79 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="vac-mP-Ltj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmh-sw-bL5">
+                                <rect key="frame" x="26" y="114" width="274" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rJK-dm-9cD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch between Celsius ℃ and Fahrenheit ℉ scale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-Lk-UMk">
+                                <rect key="frame" x="26" y="144" width="323" height="12"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFr-Z8-QIS">
+                                <rect key="frame" x="310" y="114" width="51" height="31"/>
+                                <color key="onTintColor" red="0.93725490199999995" green="0.32549019610000002" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="scaleSwitchChanged:" destination="it6-Dw-ep3" eventType="valueChanged" id="rWn-x0-u3P"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn off Ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjt-Jx-M22">
+                                <rect key="frame" x="26" y="176" width="273" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QlK-Cs-zDk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcg-QK-8li" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
+                                <rect key="frame" x="309" y="176" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CAl-Cy-m6j"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="mJB-WX-fTJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="15"/>
+                                <state key="normal" title="$0.99">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1AK-Gi-evg" firstAttribute="leading" secondItem="VwI-fe-rs8" secondAttribute="trailing" constant="30" id="0nS-o1-OP2"/>
                             <constraint firstItem="VwI-fe-rs8" firstAttribute="top" secondItem="KSj-9C-5jM" secondAttribute="bottom" constant="20" id="4qM-VN-hUW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dcg-QK-8li" secondAttribute="trailing" id="AZe-7G-ANz"/>
                             <constraint firstItem="1AK-Gi-evg" firstAttribute="centerY" secondItem="R27-7c-tGz" secondAttribute="centerY" id="LBO-58-tBQ"/>
+                            <constraint firstItem="Dcg-QK-8li" firstAttribute="centerY" secondItem="rjt-Jx-M22" secondAttribute="centerY" id="MyF-Ng-Mtc"/>
                             <constraint firstItem="VwI-fe-rs8" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="UNX-PL-cq6"/>
+                            <constraint firstItem="rjt-Jx-M22" firstAttribute="top" secondItem="vxn-Lk-UMk" secondAttribute="bottom" constant="20" id="Y8b-Hn-Aoq"/>
+                            <constraint firstItem="vxn-Lk-UMk" firstAttribute="top" secondItem="rmh-sw-bL5" secondAttribute="bottom" id="YrV-BZ-8nL"/>
+                            <constraint firstItem="KFr-Z8-QIS" firstAttribute="centerY" secondItem="rmh-sw-bL5" secondAttribute="centerY" id="bIK-Uf-cYC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1AK-Gi-evg" secondAttribute="trailing" id="bla-rz-IeX"/>
+                            <constraint firstItem="KFr-Z8-QIS" firstAttribute="leading" secondItem="rmh-sw-bL5" secondAttribute="trailing" constant="10" id="fDT-Z4-BDQ"/>
+                            <constraint firstItem="rmh-sw-bL5" firstAttribute="top" secondItem="VwI-fe-rs8" secondAttribute="bottom" constant="30" id="hB5-tr-xx9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vxn-Lk-UMk" secondAttribute="trailing" constant="10" id="n5g-bq-7fJ"/>
+                            <constraint firstItem="rjt-Jx-M22" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="quh-iT-TUA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KFr-Z8-QIS" secondAttribute="trailing" id="rrR-0H-zuQ"/>
+                            <constraint firstItem="rmh-sw-bL5" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="tZJ-aL-DBo"/>
+                            <constraint firstItem="vxn-Lk-UMk" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="uQt-xq-d00"/>
+                            <constraint firstItem="Dcg-QK-8li" firstAttribute="leading" secondItem="rjt-Jx-M22" secondAttribute="trailing" constant="10" id="z7s-uo-QZb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scaleSwitch" destination="KFr-Z8-QIS" id="Qva-f7-37m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhc-Jl-HAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -548,10 +615,11 @@
         <image name="SmallIcons2" width="90" height="90"/>
         <image name="SmallIcons3" width="90" height="90"/>
         <image name="Switch Btn" width="6" height="70"/>
-        <image name="weatherBg" width="375" height="339"/>
+        <image name="astronomyBg" width="900" height="900"/>
+        <image name="astronomyBgIpad" width="900" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="N8U-n9-HXH"/>
-        <segue reference="blq-zX-yQz"/>
+        <segue reference="vac-mP-Ltj"/>
     </inferredMetricsTieBreakers>
 </document>
