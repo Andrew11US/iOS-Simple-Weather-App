@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sl7-ql-N37">
-                                <rect key="frame" x="16" y="287" width="343" height="372"/>
+                                <rect key="frame" x="16" y="295" width="343" height="364"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -115,7 +115,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astronomyBg" translatesAutoresizingMaskIntoConstraints="NO" id="SUS-if-apm" customClass="CustomImage" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.80000000000000004"/>
@@ -127,7 +127,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" image="astronomyBgIpad"/>
                             </imageView>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="m6v-rJ-Xlo">
-                                <rect key="frame" x="87.5" y="142" width="200" height="100"/>
+                                <rect key="frame" x="87.5" y="150" width="200" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y57-BK-8XC">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
@@ -153,19 +153,19 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3Gh-XA-izA">
-                                <rect key="frame" x="26" y="40" width="253" height="92"/>
+                                <rect key="frame" x="26" y="40" width="253" height="100"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="gA0-ke-KCg">
-                                        <rect key="frame" x="0.0" y="0.0" width="253" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="isJ-Oh-yZz"/>
+                                            <constraint firstAttribute="height" constant="44" id="isJ-Oh-yZz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Muli-ExtraBold" family="Muli" pointSize="32"/>
                                         <color key="textColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GUs-JC-YCN">
-                                        <rect key="frame" x="0.0" y="36" width="253" height="20"/>
+                                        <rect key="frame" x="0.0" y="44" width="253" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="hBd-iO-CQZ"/>
                                         </constraints>
@@ -174,7 +174,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-YL-yi7">
-                                        <rect key="frame" x="0.0" y="56" width="253" height="36"/>
+                                        <rect key="frame" x="0.0" y="64" width="253" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="7Wv-jZ-kSz"/>
                                         </constraints>
@@ -185,7 +185,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="c48-Bo-SaV">
-                                <rect key="frame" x="16" y="247" width="343" height="30"/>
+                                <rect key="frame" x="16" y="255" width="343" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e8B-aT-S61">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
@@ -253,13 +253,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otu-RC-gDA">
-                                <rect key="frame" x="87.5" y="142" width="100" height="100"/>
+                                <rect key="frame" x="87.5" y="150" width="100" height="100"/>
                                 <connections>
                                     <action selector="updateWeatherTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w98-hE-pNy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1u-Pr-MH4" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="309" y="33" width="50" height="50"/>
+                                <rect key="frame" x="309" y="37" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dBo-re-LWG"/>
                                     <constraint firstAttribute="width" constant="50" id="kBN-yi-LgA"/>
@@ -270,7 +270,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trx-2p-099" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="335" y="132" width="40" height="120"/>
+                                <rect key="frame" x="335" y="140" width="40" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="1hz-mn-3Lo"/>
                                     <constraint firstAttribute="height" constant="120" id="feQ-3Q-Vsj"/>
@@ -402,7 +402,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-5C-j6s">
-                                <rect key="frame" x="177" y="344" width="21.5" height="30"/>
+                                <rect key="frame" x="176" y="344" width="24" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="joW-ps-abi"/>
                                 </constraints>
@@ -530,62 +530,85 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmh-sw-bL5">
-                                <rect key="frame" x="26" y="114" width="274" height="30"/>
+                                <rect key="frame" x="26" y="114" width="264" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rJK-dm-9cD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.14901960784313725" green="0.19607843137254902" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch between Celsius ℃ and Fahrenheit ℉ scale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-Lk-UMk">
-                                <rect key="frame" x="26" y="144" width="323" height="12"/>
+                                <rect key="frame" x="26" y="144" width="323" height="13"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFr-Z8-QIS">
-                                <rect key="frame" x="310" y="114" width="51" height="31"/>
-                                <color key="onTintColor" red="0.93725490199999995" green="0.32549019610000002" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="300" y="114" width="51" height="31"/>
+                                <color key="onTintColor" red="0.0025946430396288633" green="0.41398322582244873" blue="0.67561322450637817" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="scaleSwitchChanged:" destination="it6-Dw-ep3" eventType="valueChanged" id="rWn-x0-u3P"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn off Ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjt-Jx-M22">
-                                <rect key="frame" x="26" y="176" width="273" height="30"/>
+                                <rect key="frame" x="26" y="177" width="253" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QlK-Cs-zDk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcg-QK-8li" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
-                                <rect key="frame" x="309" y="176" width="50" height="30"/>
+                                <rect key="frame" x="289" y="177" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CAl-Cy-m6j"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="mJB-WX-fTJ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="70" id="mJB-WX-fTJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="15"/>
                                 <state key="normal" title="$0.99">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.14901960784313725" green="0.19607843137254902" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="purchaseTapped:" destination="it6-Dw-ep3" eventType="touchUpInside" id="L4m-P0-mhF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpE-9n-3eC">
+                                <rect key="frame" x="26" y="227" width="142" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="X92-jl-G2M"/>
+                                    <constraint firstAttribute="height" constant="30" id="fOf-4Y-Yqc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="16"/>
+                                <state key="normal" title="Restore Purchases">
+                                    <color key="titleColor" red="0.00259464304" green="0.41398322580000002" blue="0.67561322450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restoreBtnTapped:" destination="it6-Dw-ep3" eventType="touchUpInside" id="K7C-G3-QGM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1AK-Gi-evg" firstAttribute="leading" secondItem="VwI-fe-rs8" secondAttribute="trailing" constant="30" id="0nS-o1-OP2"/>
                             <constraint firstItem="VwI-fe-rs8" firstAttribute="top" secondItem="KSj-9C-5jM" secondAttribute="bottom" constant="20" id="4qM-VN-hUW"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WpE-9n-3eC" secondAttribute="trailingMargin" id="5Sl-kX-gDZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dcg-QK-8li" secondAttribute="trailing" id="AZe-7G-ANz"/>
+                            <constraint firstItem="WpE-9n-3eC" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="HNS-qV-tGv"/>
                             <constraint firstItem="1AK-Gi-evg" firstAttribute="centerY" secondItem="R27-7c-tGz" secondAttribute="centerY" id="LBO-58-tBQ"/>
                             <constraint firstItem="Dcg-QK-8li" firstAttribute="centerY" secondItem="rjt-Jx-M22" secondAttribute="centerY" id="MyF-Ng-Mtc"/>
                             <constraint firstItem="VwI-fe-rs8" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="UNX-PL-cq6"/>
                             <constraint firstItem="rjt-Jx-M22" firstAttribute="top" secondItem="vxn-Lk-UMk" secondAttribute="bottom" constant="20" id="Y8b-Hn-Aoq"/>
+                            <constraint firstItem="WpE-9n-3eC" firstAttribute="top" secondItem="rjt-Jx-M22" secondAttribute="bottom" constant="20" id="YZi-ho-jdp"/>
                             <constraint firstItem="vxn-Lk-UMk" firstAttribute="top" secondItem="rmh-sw-bL5" secondAttribute="bottom" id="YrV-BZ-8nL"/>
                             <constraint firstItem="KFr-Z8-QIS" firstAttribute="centerY" secondItem="rmh-sw-bL5" secondAttribute="centerY" id="bIK-Uf-cYC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1AK-Gi-evg" secondAttribute="trailing" id="bla-rz-IeX"/>
@@ -593,13 +616,14 @@
                             <constraint firstItem="rmh-sw-bL5" firstAttribute="top" secondItem="VwI-fe-rs8" secondAttribute="bottom" constant="30" id="hB5-tr-xx9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vxn-Lk-UMk" secondAttribute="trailing" constant="10" id="n5g-bq-7fJ"/>
                             <constraint firstItem="rjt-Jx-M22" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="quh-iT-TUA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KFr-Z8-QIS" secondAttribute="trailing" id="rrR-0H-zuQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KFr-Z8-QIS" secondAttribute="trailing" constant="10" id="rrR-0H-zuQ"/>
                             <constraint firstItem="rmh-sw-bL5" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="tZJ-aL-DBo"/>
                             <constraint firstItem="vxn-Lk-UMk" firstAttribute="leading" secondItem="W9o-mK-D3s" secondAttribute="leadingMargin" constant="10" id="uQt-xq-d00"/>
                             <constraint firstItem="Dcg-QK-8li" firstAttribute="leading" secondItem="rjt-Jx-M22" secondAttribute="trailing" constant="10" id="z7s-uo-QZb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="payButton" destination="Dcg-QK-8li" id="VkN-eB-HCO"/>
                         <outlet property="scaleSwitch" destination="KFr-Z8-QIS" id="Qva-f7-37m"/>
                     </connections>
                 </viewController>
@@ -619,7 +643,7 @@
         <image name="astronomyBgIpad" width="900" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N8U-n9-HXH"/>
+        <segue reference="rrd-U0-D7d"/>
         <segue reference="vac-mP-Ltj"/>
     </inferredMetricsTieBreakers>
 </document>

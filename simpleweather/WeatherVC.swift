@@ -63,8 +63,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         currentWeather = CurrentWeather()
         locationAutoStatus()
         
-        // Admob
-        launchAdMob()
+        if adFreePurchaseMade == false {
+            launchAdMob()
+        }
         
         print(celsiusSelected)
     }

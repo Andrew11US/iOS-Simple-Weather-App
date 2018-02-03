@@ -9,3 +9,4 @@
 import Foundation
 
 var celsiusSelected = UserDefaults.standard.bool(forKey: "celsiusSelected")
+var adFreePurchaseMade = UserDefaults.standard.bool(forKey: "adFreePurchaseMade")
