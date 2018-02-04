@@ -128,7 +128,7 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
             
             // IAP Purchases disabled on the Device
         } else {
-            showAlertWithTitle("Error!", message: "Purchases are disabled in your device!")
+            showAlertWithTitle("WeatherGPS", message: "Purchases are disabled in your device!")
         }
     }
     
@@ -139,7 +139,7 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
             UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
             changeButton()
             
-            showAlertWithTitle("GST Calculator", message: "You've successfully enabled Ad Free version!")
+            showAlertWithTitle("WeatherGPS", message: "You've successfully enabled Ad Free version!")
         }
     }
     
@@ -149,7 +149,7 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
         UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
         changeButton()
         
-        showAlertWithTitle("GST Calculator", message: "You've successfully restored your purchase!")
+        showAlertWithTitle("WeatherGPS", message: "You've successfully restored your purchase!")
     }
     
     // Alert Controller
