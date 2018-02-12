@@ -6,9 +6,7 @@
 //  Copyright © 2016 Andrii Halabuda. All rights reserved.
 //
 ///---Future releases---///
-//-> Barometer screen
 //-> Apple Watch version
-//-> AdMob
 
 import UIKit
 import CoreLocation

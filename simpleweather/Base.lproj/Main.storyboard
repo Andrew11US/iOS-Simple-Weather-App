@@ -49,32 +49,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1u-Qm-SKR">
-                                                    <rect key="frame" x="20" y="13" width="240" height="44"/>
+                                                    <rect key="frame" x="20" y="13" width="250" height="44"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="QmV-BM-Hlt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="190" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Rtq-Lp-HW0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
-                                                                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="20"/>
-                                                                    <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="44"/>
+                                                                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
+                                                                    <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mfc-Zz-Pc9">
-                                                            <rect key="frame" x="180" y="0.0" width="60" height="44"/>
+                                                            <rect key="frame" x="190" y="0.0" width="60" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Te3-bP-PJV">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="44"/>
-                                                                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
-                                                                    <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                                                    <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Bxj-Fk-YIf">
                                                                     <rect key="frame" x="30" y="0.0" width="30" height="44"/>
                                                                     <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
-                                                                    <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -84,11 +84,11 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TaQ-Mk-OHJ">
-                                                    <rect key="frame" x="270" y="10.5" width="50" height="50"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TaQ-Mk-OHJ">
+                                                    <rect key="frame" x="280" y="15.5" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="jZ5-mf-MFN"/>
-                                                        <constraint firstAttribute="height" constant="50" id="nGA-M9-3hb"/>
+                                                        <constraint firstAttribute="width" constant="40" id="jZ5-mf-MFN"/>
+                                                        <constraint firstAttribute="height" constant="40" id="nGA-M9-3hb"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -385,7 +385,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-5C-j6s">
-                                <rect key="frame" x="176" y="344" width="24" height="30"/>
+                                <rect key="frame" x="175.5" y="344" width="24" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="joW-ps-abi"/>
                                 </constraints>
@@ -496,12 +496,12 @@
                                             <constraint firstAttribute="height" constant="44" id="e1k-wK-grY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Muli-ExtraBold" family="Muli" pointSize="36"/>
-                                        <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AK-Gi-evg" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AK-Gi-evg" customClass="CustomButton" customModule="simpleweather" customModuleProvider="target">
                                 <rect key="frame" x="309" y="37" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QU3-dv-UrL"/>
