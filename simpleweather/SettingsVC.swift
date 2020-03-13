@@ -27,6 +27,10 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
         changeSwitchControl()
     }
     
+    @IBAction func dismiss(sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func scaleSwitchChanged(_ sender: Any) {
         
         if scaleSwitch.isOn {

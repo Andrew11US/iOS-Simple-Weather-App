@@ -43,6 +43,10 @@ class BarometerVC: UIViewController {
         return .lightContent
     }
     
+    @IBAction func dismiss(sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func handleError(type: Int)-> String {
         
         errorLbl.isHidden = false
