@@ -24,9 +24,7 @@ class BackgroundImage: UIImageView {
     @objc func playAnimation() {
         
         self.image = UIImage(named: "bg.jpg")
-        
         self.animationImages = nil
-        
         var imgArray = [UIImage]()
         
         for x in 1...8 {
@@ -39,6 +37,4 @@ class BackgroundImage: UIImageView {
         self.animationRepeatCount = 0
         self.startAnimating()
     }
-
-    
 }

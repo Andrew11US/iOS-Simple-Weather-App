@@ -10,13 +10,9 @@ import Foundation
 import UIKit
 
 func partOfDay() -> String {
-    
     let hour = NSCalendar.current.component(.hour, from: Date())
-    
     switch hour {
-        
     case 5..<20 : return "Day"
-        
     default: return "Night"
     }
 }

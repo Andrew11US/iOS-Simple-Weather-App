@@ -17,7 +17,6 @@ var pressureTorr = 0
 func getPressure() {
     
     if CMAltimeter.isRelativeAltitudeAvailable() {
-        
         altimeter.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler: { data, error in
             
             if error != nil {

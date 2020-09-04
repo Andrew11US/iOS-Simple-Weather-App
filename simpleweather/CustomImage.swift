@@ -46,7 +46,4 @@ class CustomImage: UIImageView {
         self.layer.shadowColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1.0).cgColor
         self.layer.masksToBounds = false
     }
-    
-    
-
 }

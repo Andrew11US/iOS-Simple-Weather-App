@@ -9,8 +9,7 @@
 import CoreLocation
 
 class Location {
-    
-    static var shared = Location()
+    static let shared = Location()
     private init () {}
     
     var latitude: Double!

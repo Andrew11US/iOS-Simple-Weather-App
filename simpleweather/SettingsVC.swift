@@ -10,7 +10,6 @@ import UIKit
 import StoreKit
 
 class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
-
     @IBOutlet weak var scaleSwitch: UISwitch!
     @IBOutlet weak var payButton: CustomButton!
     
@@ -32,29 +31,18 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
     }
     
     @IBAction func scaleSwitchChanged(_ sender: Any) {
-        
         if scaleSwitch.isOn {
             celsiusSelected = true
             UserDefaults.standard.set(celsiusSelected, forKey: "celsiusSelected")
-            
         } else {
             celsiusSelected = false
             UserDefaults.standard.set(celsiusSelected, forKey: "celsiusSelected")
         }
-        
         print(celsiusSelected)
     }
     
     func changeSwitchControl() {
-        
-        if celsiusSelected {
-            
-            scaleSwitch.isOn = true
-        } else {
-            
-            scaleSwitch.isOn = false
-        }
-        
+        scaleSwitch.isOn = celsiusSelected
         print(celsiusSelected)
     }
     
@@ -82,9 +70,7 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
     
     // Creating payment queue
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        
         for transaction in transactions {
-            
             switch transaction.transactionState {
             case .purchased:
                 print("Purchased")
@@ -106,12 +92,13 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
             case .deferred:
                 print("Deffered")
                 break
+            @unknown default:
+                print("Unknown error occured")
             }
         }
     }
     
     @IBAction func purchaseTapped(_ sender: Any) {
-        
         if products.count != 0 {
             purchaseProduct(product: products[0])
         }
@@ -126,10 +113,8 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(self)
             SKPaymentQueue.default().add(payment)
-            
             print("PRODUCT TO PURCHASE: \(product.productIdentifier)")
             productID = product.productIdentifier
-            
             // IAP Purchases disabled on the Device
         } else {
             showAlertWithTitle("WeatherGPS", message: "Purchases are disabled in your device!")
@@ -138,34 +123,26 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
     
     func unlockAdFree() {
         if productID == AD_FREE_ID {
-            
             adFreePurchaseMade = true
             UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
             changeButton()
-            
             showAlertWithTitle("WeatherGPS", message: "You've successfully enabled Ad Free version!")
         }
     }
     
     func restoreAdFree() {
-        
         adFreePurchaseMade = true
         UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
         changeButton()
-        
         showAlertWithTitle("WeatherGPS", message: "You've successfully restored your purchase!")
     }
     
     // Alert Controller
     func showAlertWithTitle(_ title:String, message: String) {
-        
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertVC.addAction(okAction)
-        
-        DispatchQueue.main.async { () -> Void in
-            
+        DispatchQueue.main.async {
             self.present(alertVC, animated: true, completion: nil)
         }
     }
@@ -180,5 +157,4 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
             payButton.layer.borderWidth = 0
         }
     }
-
 }

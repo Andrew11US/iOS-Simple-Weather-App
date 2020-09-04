@@ -10,7 +10,6 @@ import UIKit
 import UICircularProgressRing
 
 class BarometerVC: UIViewController {
-    
     @IBOutlet weak var pressureCentralLbl: UILabel!
     @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var menuBtn: CustomButton!
@@ -18,9 +17,7 @@ class BarometerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.setNeedsStatusBarAppearanceUpdate()
-        
         getPressure()
         errorLbl.text = handleError(type: 0)
     }
@@ -28,8 +25,7 @@ class BarometerVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
-            
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
             self.errorLbl.isHidden = true
             print("P:", pressureData)
             self.pressureCentralLbl.text = String(pressureTorr)
@@ -53,7 +49,6 @@ class BarometerVC: UIViewController {
         
         if type == 0 {
             return "Calculating..."
-            
         } else if type == 1 {
             return "Unable to load barometer data"
         } else {
