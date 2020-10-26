@@ -154,9 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				90E466151DB3D80E00147235 /* AppDelegate.swift */,
-				90E466211DB3D80E00147235 /* Info.plist */,
-				90D7E6B1200EB20B00A6AF81 /* GoogleService-Info.plist */,
 				904C6A4E200B963A00D9F5F9 /* simpleweather-Bridging-Header.h */,
+				90D7E6B1200EB20B00A6AF81 /* GoogleService-Info.plist */,
+				90E466211DB3D80E00147235 /* Info.plist */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -647,12 +647,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = simpleweather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -674,12 +674,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = simpleweather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
