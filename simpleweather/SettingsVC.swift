@@ -9,8 +9,8 @@
 import UIKit
 import StoreKit
 
-class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
-    @IBOutlet weak var scaleSwitch: UISwitch!
+class SettingsVC: UIViewController {
+    @IBOutlet weak var scaleSegmentControl: UISegmentedControl!
     @IBOutlet weak var payButton: CustomButton!
     
     let AD_FREE_ID = "com.andrewapps.simpleweather.adFree"
@@ -20,18 +20,21 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         requestProducts()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setScaleControl()
         changeButton()
-        changeSwitchControl()
     }
     
     @IBAction func dismiss(sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func scaleSwitchChanged(_ sender: Any) {
-        if scaleSwitch.isOn {
+    @IBAction func scaleControlChanged(_ sender: UISegmentedControl) {
+        if scaleSegmentControl.selectedSegmentIndex == 0 {
             celsiusSelected = true
             UserDefaults.standard.set(celsiusSelected, forKey: "celsiusSelected")
         } else {
@@ -41,11 +44,61 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
         print(celsiusSelected)
     }
     
-    func changeSwitchControl() {
-        scaleSwitch.isOn = celsiusSelected
-        print(celsiusSelected)
+    func setScaleControl() {
+        scaleSegmentControl.selectedSegmentIndex = celsiusSelected ? 0 : 1
     }
     
+    // Restore previous purchases
+    @IBAction func restoreBtnTapped(_ sender: Any) {
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+    @IBAction func purchaseTapped(_ sender: Any) {
+        if products.count != 0 {
+            purchaseProduct(product: products[0])
+        }
+    }
+    
+    func unlockAdFree() {
+        if productID == AD_FREE_ID {
+            adFreePurchaseMade = true
+            UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
+            changeButton()
+            showAlertWithTitle("WeatherGPS", message: "You've successfully enabled Ad Free version!")
+        }
+    }
+    
+    func restoreAdFree() {
+        adFreePurchaseMade = true
+        UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
+        changeButton()
+        showAlertWithTitle("WeatherGPS", message: "You've successfully restored your purchase!")
+    }
+    
+    // Alert Controller
+    func showAlertWithTitle(_ title:String, message: String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertVC.addAction(okAction)
+        DispatchQueue.main.async {
+            self.present(alertVC, animated: true, completion: nil)
+        }
+    }
+    
+    func changeButton() {
+        if adFreePurchaseMade {
+            payButton.setTitle("Done", for: .normal)
+            payButton.setTitleColor(.white, for: .normal)
+            payButton.isEnabled = false
+            payButton.layer.backgroundColor = UIColor(red: 110/255, green: 159/255, blue: 252/255, alpha: 1.0).cgColor
+            payButton.layer.borderWidth = 0
+        }
+    }
+}
+
+// MARK: - StoreKit delegate methods
+extension SettingsVC: SKProductsRequestDelegate, SKPaymentTransactionObserver {
     // Request products from Apple
     func requestProducts() {
         let productIdentifiers : Set<String> = [AD_FREE_ID]
@@ -60,12 +113,6 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
         print("Products not ready: \(response.invalidProductIdentifiers.count)")
         print("Product:", response.products[0].productIdentifier)
         self.products = response.products
-    }
-    
-    // Restore previous purchases
-    @IBAction func restoreBtnTapped(_ sender: Any) {
-        SKPaymentQueue.default().add(self)
-        SKPaymentQueue.default().restoreCompletedTransactions()
     }
     
     // Creating payment queue
@@ -98,12 +145,6 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
         }
     }
     
-    @IBAction func purchaseTapped(_ sender: Any) {
-        if products.count != 0 {
-            purchaseProduct(product: products[0])
-        }
-    }
-    
     // Check if purchases are available
     func canMakePurchases() -> Bool { return SKPaymentQueue.canMakePayments() }
     
@@ -118,43 +159,6 @@ class SettingsVC: UIViewController, SKProductsRequestDelegate, SKPaymentTransact
             // IAP Purchases disabled on the Device
         } else {
             showAlertWithTitle("WeatherGPS", message: "Purchases are disabled in your device!")
-        }
-    }
-    
-    func unlockAdFree() {
-        if productID == AD_FREE_ID {
-            adFreePurchaseMade = true
-            UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
-            changeButton()
-            showAlertWithTitle("WeatherGPS", message: "You've successfully enabled Ad Free version!")
-        }
-    }
-    
-    func restoreAdFree() {
-        adFreePurchaseMade = true
-        UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
-        changeButton()
-        showAlertWithTitle("WeatherGPS", message: "You've successfully restored your purchase!")
-    }
-    
-    // Alert Controller
-    func showAlertWithTitle(_ title:String, message: String) {
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertVC.addAction(okAction)
-        DispatchQueue.main.async {
-            self.present(alertVC, animated: true, completion: nil)
-        }
-    }
-    
-    func changeButton() {
-        if adFreePurchaseMade {
-            // Close Ad
-            payButton.setTitle("Done", for: .normal)
-            payButton.setTitleColor(.white, for: .normal)
-            payButton.isEnabled = false
-            payButton.layer.backgroundColor = UIColor(red: 1/255, green: 106/255, blue: 172/255, alpha: 1.0).cgColor
-            payButton.layer.borderWidth = 0
         }
     }
 }

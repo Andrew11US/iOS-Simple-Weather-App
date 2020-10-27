@@ -43,8 +43,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.setNeedsStatusBarAppearanceUpdate()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         //locationManager.requestWhenInUseAuthorization()
@@ -61,10 +59,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         }
         
         print(celsiusSelected)
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {

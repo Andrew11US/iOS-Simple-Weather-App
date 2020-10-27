@@ -10,14 +10,15 @@ import UIKit
 import UICircularProgressRing
 
 class BarometerVC: UIViewController {
-    @IBOutlet weak var pressureCentralLbl: UILabel!
+    @IBOutlet weak var pressureMmHgLbl: UILabel!
+    @IBOutlet weak var pressureKPaLbl: UILabel!
+    @IBOutlet weak var pressureInHgLbl: UILabel!
     @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var menuBtn: CustomButton!
     @IBOutlet weak var circleBar: UICircularProgressRingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNeedsStatusBarAppearanceUpdate()
         getPressure()
         errorLbl.text = handleError(type: 0)
     }
@@ -27,16 +28,14 @@ class BarometerVC: UIViewController {
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
             self.errorLbl.isHidden = true
-            print("P:", pressureData)
-            self.pressureCentralLbl.text = String(pressureTorr)
-            self.circleBar.setProgress(value: CGFloat(pressureTorr), animationDuration: 1.0, completion: {
+            print("P:", pressureKPa)
+            self.pressureMmHgLbl.text = "\(pressureMmHg) mm Hg"
+            self.pressureInHgLbl.text = "\(pressureInHg) in Hg"
+            self.pressureKPaLbl.text = "\(pressureKPa) KPa"
+            self.circleBar.setProgress(value: CGFloat(pressureMmHg), animationDuration: 1.0, completion: {
                 print("Animated!")
             })
         }
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
     
     @IBAction func dismiss(sender: Any) {
@@ -44,7 +43,6 @@ class BarometerVC: UIViewController {
     }
     
     func handleError(type: Int)-> String {
-        
         errorLbl.isHidden = false
         
         if type == 0 {

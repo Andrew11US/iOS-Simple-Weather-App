@@ -109,14 +109,14 @@ open class CurrentWeather {
                 
                 if let name = dict["name"] as? String {
                     self._cityName = name.capitalized
-                    print(self._cityName)
+                    print(self._cityName ?? "")
                 }
               
                 if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] {
                     
                     if let main = weather[0]["main"] as? String {
                         self._weatherType = main.capitalized
-                        print(self._weatherType)
+                        print(self._weatherType ?? "")
                     }
                     
                     if let description = weather[0]["description"] as? String {
@@ -130,7 +130,7 @@ open class CurrentWeather {
                     if let speed = wind["speed"] as? Double {
                         let speedRounded = Double(round(speed))
                         self._wind = String(Int(speedRounded))
-                        print("Wind:" , self._wind)
+                        print("Wind:" , self._wind ?? "")
                     }
                 }
                 
@@ -139,7 +139,7 @@ open class CurrentWeather {
                     if let all = cloudiness["all"] as? Int {
                         
                         self._cloudiness = String(all)
-                        print("Clouds:" , self._cloudiness)
+                        print("Clouds:" , self._cloudiness ?? "")
                     }
                 }
                 
@@ -151,12 +151,12 @@ open class CurrentWeather {
                             let kelvinToCelsiusRaw = (currentTemperature - 273.15)
                             let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
                             self._currentTemp = String(Int(kelvinToCelsius))
-                            print("Temp:", self._currentTemp)
+                            print("Temp:", self._currentTemp ?? "")
                         } else {
                             let kelvinToFahrenheitRaw = ((currentTemperature * 1.8) - 459.67)
                             let kelvinToFahrenheit = Double(round(10 * kelvinToFahrenheitRaw/10))
                             self._currentTemp = String(Int(kelvinToFahrenheit))
-                            print("Temp:", self._currentTemp)
+                            print("Temp:", self._currentTemp ?? "")
                         }
                     }
                     
@@ -164,13 +164,13 @@ open class CurrentWeather {
                         
                         let pressureRound = Double(round(pressure))
                         self._pressure = String(Int(pressureRound))
-                        print("Pressure:", self._pressure)
+                        print("Pressure:", self._pressure ?? "")
                     }
                     
                     if let humidity = main["humidity"] as? Int {
                         
                         self._humidity = String(humidity)
-                        print("Humidity:", self._humidity)
+                        print("Humidity:", self._humidity ?? "")
                     }
                     
                     if let maxTemp = main["temp_max"] as? Double {
@@ -178,7 +178,7 @@ open class CurrentWeather {
                         let kelvinToCelsiusRaw = (maxTemp - 273.15)
                         let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
                         self._maxTemp = String(Int(kelvinToCelsius))
-                        print("maxTemp:", self._maxTemp)
+                        print("maxTemp:", self._maxTemp ?? "")
                     }
                     
                 }
@@ -194,7 +194,7 @@ open class CurrentWeather {
                 if let uv = dict["value"] as? Double {
                     let uvRounded = Double(round(uv))
                     self._uvIndex = String(Int(uvRounded))
-                    print("UV:" , self._uvIndex)
+                    print("UV:" , self._uvIndex ?? "")
                 }
             }
         }

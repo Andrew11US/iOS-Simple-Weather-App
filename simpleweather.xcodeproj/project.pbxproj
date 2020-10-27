@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01BAC10D25485F8500B5F624 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC10C25485F8500B5F624 /* UIView+Extension.swift */; };
+		01BAC11525486E7900B5F624 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC11425486E7900B5F624 /* Double+Extension.swift */; };
 		01C20EEB2503947100715910 /* simpleweatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C20EEA2503947100715910 /* simpleweatherTests.swift */; };
 		9000AF2E1FC9B29E00517D27 /* Baumans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9000AF2D1FC9B29D00517D27 /* Baumans-Regular.ttf */; };
 		9000AF301FC9E62C00517D27 /* PartOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000AF2F1FC9E62C00517D27 /* PartOfDay.swift */; };
@@ -14,7 +16,7 @@
 		90499F631F67FDEE008AFAD1 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90499F621F67FDEE008AFAD1 /* Barometer.swift */; };
 		904C6A4B200B83C900D9F5F9 /* BarometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A4A200B83C900D9F5F9 /* BarometerVC.swift */; };
 		904C6A4D200B83D700D9F5F9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A4C200B83D700D9F5F9 /* SettingsVC.swift */; };
-		904C6A52200B971E00D9F5F9 /* CustomButtonAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A51200B971E00D9F5F9 /* CustomButtonAnimated.swift */; };
+		904C6A52200B971E00D9F5F9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C6A51200B971E00D9F5F9 /* CustomButton.swift */; };
 		9086DA7B1DBFEC870045C3F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086DA7A1DBFEC870045C3F4 /* Constants.swift */; };
 		9086DA7D1DBFEFBE0045C3F4 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086DA7C1DBFEFBE0045C3F4 /* CurrentWeather.swift */; };
 		909C22951DC238290098E1FB /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909C22941DC238290098E1FB /* BackgroundImage.swift */; };
@@ -59,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01BAC10C25485F8500B5F624 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		01BAC11425486E7900B5F624 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		01C20EE82503947100715910 /* simpleweatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleweatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C20EEA2503947100715910 /* simpleweatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleweatherTests.swift; sourceTree = "<group>"; };
 		01C20EEC2503947100715910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,7 +82,7 @@
 		904C6A4A200B83C900D9F5F9 /* BarometerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerVC.swift; sourceTree = "<group>"; };
 		904C6A4C200B83D700D9F5F9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		904C6A4E200B963A00D9F5F9 /* simpleweather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "simpleweather-Bridging-Header.h"; sourceTree = "<group>"; };
-		904C6A51200B971E00D9F5F9 /* CustomButtonAnimated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonAnimated.swift; sourceTree = "<group>"; };
+		904C6A51200B971E00D9F5F9 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9086DA7A1DBFEC870045C3F4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9086DA7C1DBFEFBE0045C3F4 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		909C22941DC238290098E1FB /* BackgroundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
@@ -178,8 +182,9 @@
 				90E466191DB3D80E00147235 /* Main.storyboard */,
 				90A410D71DC12EEA009C9238 /* WeatherCell.swift */,
 				909C22941DC238290098E1FB /* BackgroundImage.swift */,
-				904C6A51200B971E00D9F5F9 /* CustomButtonAnimated.swift */,
+				904C6A51200B971E00D9F5F9 /* CustomButton.swift */,
 				902DF25E201B845600C7B458 /* CustomImage.swift */,
+				01BAC10C25485F8500B5F624 /* UIView+Extension.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				90499F621F67FDEE008AFAD1 /* Barometer.swift */,
 				9000AF2F1FC9E62C00517D27 /* PartOfDay.swift */,
 				90C1EFCC2026355000F221CB /* GlobalData.swift */,
+				01BAC11425486E7900B5F624 /* Double+Extension.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -294,7 +300,7 @@
 			attributes = {
 				DefaultBuildSystemTypeForWorkspace = Latest;
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Andrii Halabuda";
 				TargetAttributes = {
 					01C20EE72503947100715910 = {
@@ -433,7 +439,9 @@
 			files = (
 				90E466181DB3D80E00147235 /* WeatherVC.swift in Sources */,
 				90E466161DB3D80E00147235 /* AppDelegate.swift in Sources */,
+				01BAC10D25485F8500B5F624 /* UIView+Extension.swift in Sources */,
 				90A410D81DC12EEA009C9238 /* WeatherCell.swift in Sources */,
+				01BAC11525486E7900B5F624 /* Double+Extension.swift in Sources */,
 				909C22951DC238290098E1FB /* BackgroundImage.swift in Sources */,
 				9000AF301FC9E62C00517D27 /* PartOfDay.swift in Sources */,
 				904C6A4D200B83D700D9F5F9 /* SettingsVC.swift in Sources */,
@@ -444,7 +452,7 @@
 				90A410D61DC11F0D009C9238 /* Forecast.swift in Sources */,
 				90A410DB1DC139FB009C9238 /* Location.swift in Sources */,
 				902DF25F201B845600C7B458 /* CustomImage.swift in Sources */,
-				904C6A52200B971E00D9F5F9 /* CustomButtonAnimated.swift in Sources */,
+				904C6A52200B971E00D9F5F9 /* CustomButton.swift in Sources */,
 				904C6A4B200B83C900D9F5F9 /* BarometerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +559,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -576,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -610,6 +619,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -629,7 +639,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -647,10 +657,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = simpleweather/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather;
@@ -674,10 +684,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 43;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = simpleweather/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewapps.simpleweather;
