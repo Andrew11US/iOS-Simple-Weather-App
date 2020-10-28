@@ -13,7 +13,7 @@ import Alamofire
 import Foundation
 import GoogleMobileAds
 
-class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, GADBannerViewDelegate {
+class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
 
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var currentTempLbl: UILabel!
@@ -146,20 +146,22 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     }
     
     @objc func downloadForecastData(completed: @escaping DownloadComplete) {
-        // Downloading forecast weather data for TableView
-        Alamofire.request(FORECAST_URL).responseJSON { response in
-            let result = response.result
-            if let dict = result.value as? Dictionary<String, AnyObject> {
-                if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
-                    for obj in list {
-                        let forecast = Forecast(weatherDict: obj)
-                        self.forecasts.append(forecast)
+        AF.request(FORECAST_URL).responseJSON { response in
+            switch response.result {
+            case .success(let result):
+                if let dict = result as? Dictionary<String, AnyObject> {
+                    if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
+                        for obj in list {
+                            let forecast = Forecast(weatherDict: obj)
+                            self.forecasts.append(forecast)
+                        }
+                        self.forecasts.remove(at: 0)
+                        self.tableView.reloadData()
                     }
-                    self.forecasts.remove(at: 0)
-                    self.tableView.reloadData()
                 }
+                completed()
+            case .failure(_): break
             }
-            completed()
         }
     }
     
@@ -235,18 +237,21 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         locationAutoStatus()
     }
     
-    // Banner Ad loader
-    func loadAd(adUnitID: String) {
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID, deviceId]
-        banner.adUnitID = adUnitID
-        banner.load(request)
-    }
-    
-    func launchAdMob() {
-        banner.rootViewController = self
-        banner.delegate = self
-        loadAd(adUnitID: adUnit)
-    }
+
 }
 
+extension WeatherVC: GADBannerViewDelegate {
+    //Banner Ad loader
+   func loadAd(adUnitID: String) {
+       let request = GADRequest()
+       request.testDevices = [kGADSimulatorID, deviceId]
+       banner.adUnitID = adUnitID
+       banner.load(request)
+   }
+   
+   func launchAdMob() {
+       banner.rootViewController = self
+       banner.delegate = self
+       loadAd(adUnitID: adUnit)
+   }
+}

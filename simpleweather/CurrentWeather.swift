@@ -99,104 +99,93 @@ open class CurrentWeather {
     }
     
     func downloadWeatherDetails(completed: @escaping DownloadComplete) {
-        // Download current weather data
-        Alamofire.request(CURRENT_WEATHER_URL).responseJSON { response in
-            let result = response.result
-            
-            if let dict = result.value as? Dictionary<String, AnyObject> {
-                
-                print(dict)
-                
-                if let name = dict["name"] as? String {
-                    self._cityName = name.capitalized
-                    print(self._cityName ?? "")
-                }
-              
-                if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] {
+        AF.request(CURRENT_WEATHER_URL).responseJSON { response in
+            switch response.result {
+            case .success(let result):
+                if let dict = result as? Dictionary<String, AnyObject> {
                     
-                    if let main = weather[0]["main"] as? String {
-                        self._weatherType = main.capitalized
-                        print(self._weatherType ?? "")
+                    print(dict)
+                    
+                    if let name = dict["name"] as? String {
+                        self._cityName = name.capitalized
+                        print(self._cityName ?? "")
                     }
                     
-                    if let description = weather[0]["description"] as? String {
-//                        self._weatherType = description.capitalized
-                        print(description.capitalized)
-                    }
-                }
-                
-                if let wind = dict["wind"] as? Dictionary<String, AnyObject> {
-                    
-                    if let speed = wind["speed"] as? Double {
-                        let speedRounded = Double(round(speed))
-                        self._wind = String(Int(speedRounded))
-                        print("Wind:" , self._wind ?? "")
-                    }
-                }
-                
-                if let cloudiness = dict["clouds"] as? Dictionary<String, AnyObject> {
-                    
-                    if let all = cloudiness["all"] as? Int {
+                    if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] {
                         
-                        self._cloudiness = String(all)
-                        print("Clouds:" , self._cloudiness ?? "")
-                    }
-                }
-                
-                if let main = dict["main"] as? Dictionary<String, AnyObject> {
-                    
-                    if let currentTemperature = main["temp"] as? Double {
+                        if let main = weather[0]["main"] as? String {
+                            self._weatherType = main.capitalized
+                            print(self._weatherType ?? "")
+                        }
                         
-                        if celsiusSelected {
-                            let kelvinToCelsiusRaw = (currentTemperature - 273.15)
-                            let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
-                            self._currentTemp = String(Int(kelvinToCelsius))
-                            print("Temp:", self._currentTemp ?? "")
-                        } else {
-                            let kelvinToFahrenheitRaw = ((currentTemperature * 1.8) - 459.67)
-                            let kelvinToFahrenheit = Double(round(10 * kelvinToFahrenheitRaw/10))
-                            self._currentTemp = String(Int(kelvinToFahrenheit))
-                            print("Temp:", self._currentTemp ?? "")
+                        if let description = weather[0]["description"] as? String {
+                            //                        self._weatherType = description.capitalized
+                            print(description.capitalized)
                         }
                     }
                     
-                    if let pressure = main["pressure"] as? Double {
+                    if let wind = dict["wind"] as? Dictionary<String, AnyObject> {
                         
-                        let pressureRound = Double(round(pressure))
-                        self._pressure = String(Int(pressureRound))
-                        print("Pressure:", self._pressure ?? "")
+                        if let speed = wind["speed"] as? Double {
+                            let speedRounded = Double(round(speed))
+                            self._wind = String(Int(speedRounded))
+                            print("Wind:" , self._wind ?? "")
+                        }
                     }
                     
-                    if let humidity = main["humidity"] as? Int {
+                    if let cloudiness = dict["clouds"] as? Dictionary<String, AnyObject> {
                         
-                        self._humidity = String(humidity)
-                        print("Humidity:", self._humidity ?? "")
+                        if let all = cloudiness["all"] as? Int {
+                            
+                            self._cloudiness = String(all)
+                            print("Clouds:" , self._cloudiness ?? "")
+                        }
                     }
                     
-                    if let maxTemp = main["temp_max"] as? Double {
+                    if let main = dict["main"] as? Dictionary<String, AnyObject> {
                         
-                        let kelvinToCelsiusRaw = (maxTemp - 273.15)
-                        let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
-                        self._maxTemp = String(Int(kelvinToCelsius))
-                        print("maxTemp:", self._maxTemp ?? "")
+                        if let currentTemperature = main["temp"] as? Double {
+                            
+                            if celsiusSelected {
+                                let kelvinToCelsiusRaw = (currentTemperature - 273.15)
+                                let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
+                                self._currentTemp = String(Int(kelvinToCelsius))
+                                print("Temp:", self._currentTemp ?? "")
+                            } else {
+                                let kelvinToFahrenheitRaw = ((currentTemperature * 1.8) - 459.67)
+                                let kelvinToFahrenheit = Double(round(10 * kelvinToFahrenheitRaw/10))
+                                self._currentTemp = String(Int(kelvinToFahrenheit))
+                                print("Temp:", self._currentTemp ?? "")
+                            }
+                        }
+                        
+                        if let pressure = main["pressure"] as? Double {
+                            
+                            let pressureRound = Double(round(pressure))
+                            self._pressure = String(Int(pressureRound))
+                            print("Pressure:", self._pressure ?? "")
+                        }
+                        
+                        if let humidity = main["humidity"] as? Int {
+                            
+                            self._humidity = String(humidity)
+                            print("Humidity:", self._humidity ?? "")
+                        }
+                        
+                        if let maxTemp = main["temp_max"] as? Double {
+                            
+                            let kelvinToCelsiusRaw = (maxTemp - 273.15)
+                            let kelvinToCelsius = Double(round(10 * kelvinToCelsiusRaw/10))
+                            self._maxTemp = String(Int(kelvinToCelsius))
+                            print("maxTemp:", self._maxTemp ?? "")
+                        }
+                        
                     }
-                    
                 }
+                completed()
+            case .failure: break
             }
-            completed()
-        }
-        
-        Alamofire.request(UV_INDEX_URL).responseJSON { response in
-            let result = response.result
             
-            if let dict = result.value as? Dictionary<String, AnyObject> {
-                
-                if let uv = dict["value"] as? Double {
-                    let uvRounded = Double(round(uv))
-                    self._uvIndex = String(Int(uvRounded))
-                    print("UV:" , self._uvIndex ?? "")
-                }
-            }
         }
     }
     

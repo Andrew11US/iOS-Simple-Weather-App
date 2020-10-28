@@ -284,7 +284,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="banner" destination="1s9-6s-7KY" id="ziD-Vr-E9o"/>
+                        <outlet property="banner" destination="1s9-6s-7KY" id="HRb-h9-psO"/>
                         <outlet property="cloudinessLbl" destination="yQW-W6-1Ci" id="aDX-P7-2RA"/>
                         <outlet property="currentTempLbl" destination="gfh-ha-AbN" id="kqe-ls-eRU"/>
                         <outlet property="currentWeatherImg" destination="yPp-Ue-QkI" id="dVp-eD-J94"/>
@@ -339,7 +339,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EW4-NK-8Xb" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
+                            <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EW4-NK-8Xb" customClass="UICircularProgressRing" customModule="simpleweather" customModuleProvider="target">
                                 <rect key="frame" x="112.66666666666669" y="125.66666666666669" width="150" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -425,7 +425,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GMf-iO-p3f"/>
                     <connections>
-                        <outlet property="circleBar" destination="EW4-NK-8Xb" id="fGg-k0-xCK"/>
+                        <outlet property="circleBar" destination="EW4-NK-8Xb" id="oVz-sc-tIz"/>
                         <outlet property="errorLbl" destination="dIM-5C-j6s" id="gn0-QO-sGg"/>
                         <outlet property="menuBtn" destination="tsa-Lp-pc4" id="fpe-9V-FyD"/>
                         <outlet property="pressureInHgLbl" destination="6vy-Hi-Ybx" id="qeV-Fd-fG9"/>
@@ -450,7 +450,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HRg-nZ-Ubh">
-                                <rect key="frame" x="20" y="0.0" width="335" height="303.33333333333331"/>
+                                <rect key="frame" x="20" y="0.0" width="335" height="305.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VwI-fe-rs8">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="94"/>
@@ -479,10 +479,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gDp-vW-dyE">
-                                        <rect key="frame" x="0.0" y="123.99999999999999" width="335" height="54.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="123.99999999999999" width="335" height="56.333333333333329"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-2m-6qn">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
                                                 <segments>
                                                     <segment title="℃ Celsius"/>
                                                     <segment title="℉ Fahrenheit"/>
@@ -493,7 +493,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select temperature scale. Shake to update the weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezZ-WK-NVq">
-                                                <rect key="frame" x="0.0" y="40" width="335" height="14.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="42" width="335" height="14.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="textColor" systemColor="tertiaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
@@ -501,7 +501,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6UN-so-W1z">
-                                        <rect key="frame" x="0.0" y="208.33333333333334" width="335" height="35"/>
+                                        <rect key="frame" x="0.0" y="210.33333333333334" width="335" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove Ad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjt-Jx-M22">
                                                 <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="35"/>
@@ -532,7 +532,7 @@
                                         </subviews>
                                     </stackView>
                                     <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpE-9n-3eC">
-                                        <rect key="frame" x="0.0" y="273.33333333333331" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="275.33333333333331" width="335" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="fOf-4Y-Yqc"/>
                                         </constraints>
@@ -567,7 +567,7 @@
     </scenes>
     <designables>
         <designable name="Dcg-QK-8li">
-            <size key="intrinsicContentSize" width="38" height="30"/>
+            <size key="intrinsicContentSize" width="40" height="31"/>
         </designable>
         <designable name="X1u-Pr-MH4">
             <size key="intrinsicContentSize" width="46" height="22"/>

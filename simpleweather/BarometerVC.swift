@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UICircularProgressRing
 
 class BarometerVC: UIViewController {
     @IBOutlet weak var pressureMmHgLbl: UILabel!
@@ -15,7 +14,7 @@ class BarometerVC: UIViewController {
     @IBOutlet weak var pressureInHgLbl: UILabel!
     @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var menuBtn: CustomButton!
-    @IBOutlet weak var circleBar: UICircularProgressRingView!
+    @IBOutlet weak var circleBar: UICircularProgressRing!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +23,17 @@ class BarometerVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewDidAppear(true)
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
             self.errorLbl.isHidden = true
-            print("P:", pressureKPa)
             self.pressureMmHgLbl.text = "\(pressureMmHg) mm Hg"
             self.pressureInHgLbl.text = "\(pressureInHg) in Hg"
             self.pressureKPaLbl.text = "\(pressureKPa) KPa"
-            self.circleBar.setProgress(value: CGFloat(pressureMmHg), animationDuration: 1.0, completion: nil)
+            self.circleBar.minValue = 650
+            self.circleBar.maxValue = 850
+            self.circleBar.value = 651
+            self.circleBar.startProgress(to: CGFloat(pressureMmHg), duration: 3.0)
         }
     }
     
