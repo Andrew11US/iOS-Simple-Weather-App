@@ -33,7 +33,7 @@ class BarometerVC: UIViewController {
             self.circleBar.minValue = 650
             self.circleBar.maxValue = 850
             self.circleBar.value = 651
-            self.circleBar.startProgress(to: CGFloat(pressureMmHg), duration: 3.0)
+            self.circleBar.startProgress(to: CGFloat(pressureMmHg), duration: 0)
         }
     }
     
