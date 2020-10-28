@@ -14,15 +14,27 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var highTemp: UILabel!
     @IBOutlet weak var lowTemp: UILabel!
     
-    func configureCell(forecast: Forecast) {
+    func configure(forecast: Forecast) {
         lowTemp.text = "\(forecast.lowTemp)"
         highTemp.text = "\(forecast.highTemp)"
-        weatherIcon.image = UIImage(named: "B\(forecast.weatherType)")
+        adaptImages(forecast: forecast)
         dayLbl.text = forecast.date
+    }
+    
+    private func adaptImages(forecast: Forecast) {
+        switch traitCollection.userInterfaceStyle {
+        case .light, .unspecified:
+            weatherIcon.image = UIImage(named: "B\(forecast.weatherType)")
+        case .dark:
+            weatherIcon.image = UIImage(named: "\(forecast.weatherType)")
+        @unknown default:
+            weatherIcon.image = UIImage(named: "B\(forecast.weatherType)")
+        }
         
         if weatherIcon.image == nil {
             weatherIcon.image = UIImage(named: "NoCondition")
-            print("No Image!")
         }
     }
+    
+    
 }

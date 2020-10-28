@@ -133,6 +133,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         }
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        updateWeatherDetails()
+    }
+    
     @IBAction func openSettings(sender: Any) {
         self.performSegue(withIdentifier: "toSettings", sender: nil)
     }
@@ -176,7 +180,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             
             if forecasts.count != 0 {
                 let forecast = forecasts[indexPath.row]
-                cell.configureCell(forecast: forecast)
+                cell.configure(forecast: forecast)
             } else {
 //                currentWeatherImg.image = UIImage(named: "No")
 //                currentWeatherTypeLbl.text = "No"
@@ -218,21 +222,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             humidityLbl.text = "--"
             windLbl.text = "--"
             cloudinessLbl.text = "--"
-//            uvIndexLbl.text = "--"
-//            pressureLbl.text = "--"
+            
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.warning)
         }
     }
     
     @objc func updateWeatherDetails() {
-        if forecasts.count > 0 {
-            forecasts.removeAll()
-        }
-        locationAutoStatus()
-    }
-    
-    @IBAction func updateWeatherTapped(_ sender: UIButton) {
         if forecasts.count > 0 {
             forecasts.removeAll()
         }

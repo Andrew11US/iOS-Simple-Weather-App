@@ -32,9 +32,7 @@ class BarometerVC: UIViewController {
             self.pressureMmHgLbl.text = "\(pressureMmHg) mm Hg"
             self.pressureInHgLbl.text = "\(pressureInHg) in Hg"
             self.pressureKPaLbl.text = "\(pressureKPa) KPa"
-            self.circleBar.setProgress(value: CGFloat(pressureMmHg), animationDuration: 1.0, completion: {
-                print("Animated!")
-            })
+            self.circleBar.setProgress(value: CGFloat(pressureMmHg), animationDuration: 1.0, completion: nil)
         }
     }
     
@@ -42,13 +40,13 @@ class BarometerVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    func handleError(type: Int)-> String {
+    func handleError(type: Int) -> String {
         errorLbl.isHidden = false
         
         if type == 0 {
             return "Calculating..."
         } else if type == 1 {
-            return "Unable to load barometer data"
+            return "Unable to load pressure data"
         } else {
             return "--"
         }

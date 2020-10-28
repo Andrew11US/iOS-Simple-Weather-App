@@ -657,7 +657,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 43;
+				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = simpleweather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -684,7 +684,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 43;
+				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = simpleweather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
