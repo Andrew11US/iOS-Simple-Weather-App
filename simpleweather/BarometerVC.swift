@@ -31,14 +31,14 @@ class BarometerVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
             if pressureMmHg == 0 {
                 self.errorLbl.text = "Altimeter is not available"
             }
             self.pressureMmHgLbl.text = "\(pressureMmHg) mm Hg"
             self.pressureInHgLbl.text = "\(pressureInHg) in Hg"
             self.pressureKPaLbl.text = "\(pressureKPa) KPa"
-            self.circleBar.startProgress(to: CGFloat(pressureMmHg), duration: 2)
+            self.circleBar.startProgress(to: CGFloat(pressureMmHg), duration: 1.5)
         }
     }
     
