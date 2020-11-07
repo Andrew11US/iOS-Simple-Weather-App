@@ -22,6 +22,10 @@ class BarometerVC: UIViewController {
         self.circleBar.minValue = 650
         self.circleBar.maxValue = 850
         self.circleBar.value = 651
+        
+//        pressureKPa = 101.4386
+//        pressureInHg = Double(101.4386 / 3.386).round(places: 2)
+//        pressureMmHg = Int(7.501 * pressureKPa)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,7 +39,6 @@ class BarometerVC: UIViewController {
             self.pressureInHgLbl.text = "\(pressureInHg) in Hg"
             self.pressureKPaLbl.text = "\(pressureKPa) KPa"
             self.circleBar.startProgress(to: CGFloat(pressureMmHg), duration: 2)
-//            self.circleBar.startProgress(to: CGFloat(800), duration: 2)
         }
     }
     
