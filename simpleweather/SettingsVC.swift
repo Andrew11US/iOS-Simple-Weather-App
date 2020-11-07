@@ -65,7 +65,6 @@ class SettingsVC: UIViewController {
             adFreePurchaseMade = true
             UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
             changeButton()
-            showAlertWithTitle("WeatherGPS", message: "You've successfully enabled Ad Free version!")
         }
     }
     
@@ -73,7 +72,6 @@ class SettingsVC: UIViewController {
         adFreePurchaseMade = true
         UserDefaults.standard.set(adFreePurchaseMade, forKey: "adFreePurchaseMade")
         changeButton()
-        showAlertWithTitle("WeatherGPS", message: "You've successfully restored your purchase!")
     }
     
     // Alert Controller

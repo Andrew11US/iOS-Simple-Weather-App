@@ -19,38 +19,27 @@ class BarometerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getPressure()
-        errorLbl.text = handleError(type: 0)
+        self.circleBar.minValue = 650
+        self.circleBar.maxValue = 850
+        self.circleBar.value = 651
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
-            self.errorLbl.isHidden = true
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { (timer) in
+            if pressureMmHg == 0 {
+                self.errorLbl.text = "Altimeter is not available"
+            }
             self.pressureMmHgLbl.text = "\(pressureMmHg) mm Hg"
             self.pressureInHgLbl.text = "\(pressureInHg) in Hg"
             self.pressureKPaLbl.text = "\(pressureKPa) KPa"
-            self.circleBar.minValue = 650
-            self.circleBar.maxValue = 850
-            self.circleBar.value = 651
-            self.circleBar.startProgress(to: CGFloat(pressureMmHg), duration: 0)
+            self.circleBar.startProgress(to: CGFloat(pressureMmHg), duration: 2)
+//            self.circleBar.startProgress(to: CGFloat(800), duration: 2)
         }
     }
     
     @IBAction func dismiss(sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    func handleError(type: Int) -> String {
-        errorLbl.isHidden = false
-        
-        if type == 0 {
-            return "Calculating..."
-        } else if type == 1 {
-            return "Unable to load pressure data"
-        } else {
-            return "--"
-        }
-    }
-
 }

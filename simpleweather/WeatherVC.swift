@@ -45,7 +45,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        //locationManager.requestWhenInUseAuthorization()
         locationManager.startMonitoringSignificantLocationChanges()
         
         tableView.dataSource = self
@@ -54,11 +53,14 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         currentWeather = CurrentWeather()
         locationAutoStatus()
         
-        if adFreePurchaseMade == false {
+        if !adFreePurchaseMade {
             launchAdMob()
         }
-        
-        print(celsiusSelected)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        banner.isHidden = adFreePurchaseMade
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
